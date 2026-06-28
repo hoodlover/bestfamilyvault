@@ -1,0 +1,1034 @@
+﻿=== Run @ 2026-05-10 02:32:08 ===
+
+> cobbvault@0.1.0 import:inbox
+> tsx --env-file=.env.local scripts/import-inbox.ts
+
+≡ƒô¡ Inbox empty: C:\Users\lance\Documents\Vault Inbox
+
+=== Run @ 2026-05-11 02:32:09 ===
+
+> cobbvault@0.1.0 import:inbox
+> tsx --env-file=.env.local scripts/import-inbox.ts
+
+≡ƒô¡ Inbox empty: C:\Users\lance\Documents\Vault Inbox
+
+=== Run @ 2026-05-12 02:32:09 ===
+
+> cobbvault@0.1.0 import:inbox
+> tsx --env-file=.env.local scripts/import-inbox.ts
+
+≡ƒô¡ Inbox empty: C:\Users\lance\Documents\Vault Inbox
+
+=== Run @ 2026-05-13 02:32:09 ===
+
+> cobbvault@0.1.0 import:inbox
+> tsx --env-file=.env.local scripts/import-inbox.ts
+
+≡ƒô¡ Inbox empty: C:\Users\lance\Documents\Vault Inbox
+
+=== Run @ 2026-05-14 02:32:09 ===
+
+> cobbvault@0.1.0 import:inbox
+> tsx --env-file=.env.local scripts/import-inbox.ts
+
+≡ƒô¡ Inbox empty: C:\Users\lance\Documents\Vault Inbox
+
+=== Run @ 2026-05-15 02:32:09 ===
+
+> cobbvault@0.1.0 import:inbox
+> tsx --env-file=.env.local scripts/import-inbox.ts
+
+≡ƒô¡ Inbox empty: C:\Users\lance\Documents\Vault Inbox
+
+=== Run @ 2026-05-16 03:02:05 ===
+
+> cobbvault@0.1.0 import:inbox
+> tsx --env-file=.env.local scripts/import-inbox.ts
+
+=== Run @ 2026-05-17 02:32:09 ===
+
+> cobbvault@0.1.0 import:inbox
+> tsx --env-file=.env.local scripts/import-inbox.ts
+
+≡ƒô¡ Inbox empty: C:\Users\lance\Documents\Vault Inbox
+
+=== Run @ 2026-05-18 02:32:09 ===
+
+> cobbvault@0.1.0 import:inbox
+> tsx --env-file=.env.local scripts/import-inbox.ts
+
+≡ƒô¡ Inbox empty: C:\Users\lance\Documents\Vault Inbox
+
+=== Run @ 2026-05-19 02:32:09 ===
+
+> cobbvault@0.1.0 import:inbox
+> tsx --env-file=.env.local scripts/import-inbox.ts
+
+≡ƒô¡ Inbox empty: C:\Users\lance\Documents\Vault Inbox
+
+=== Run @ 2026-05-21 02:32:08 ===
+
+> cobbvault@0.1.0 import:inbox
+> tsx --env-file=.env.local scripts/import-inbox.ts
+
+≡ƒô¡ Inbox empty: C:\Users\lance\Documents\Vault Inbox
+
+=== Run @ 2026-05-22 02:32:08 ===
+
+> cobbvault@0.1.0 import:inbox
+> tsx --env-file=.env.local scripts/import-inbox.ts
+
+≡ƒô¡ Inbox empty: C:\Users\lance\Documents\Vault Inbox
+
+=== Run @ 2026-05-24 03:09:01 ===
+
+> cobbvault@0.1.0 import:inbox
+> tsx --env-file=.env.local scripts/import-inbox.ts
+
+≡ƒô¡ Inbox empty: C:\Users\lance\Documents\Vault Inbox
+
+=== Run @ 2026-05-25 02:32:09 ===
+
+> cobbvault@0.1.0 import:inbox
+> tsx --env-file=.env.local scripts/import-inbox.ts
+
+node.exe : DrizzleQueryError: Failed query: select "id", "email" from "user" where "user"."email" = $1
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DrizzleQueryErr...r"."email" = $1:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+params: lance.climb@gmail.com
+    at NeonHttpPreparedQuery.queryWithCache (C:\Projects\cobbvault\node_modules\src\pg-core\session.ts:73:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async NeonHttpPreparedQuery.execute (C:\Projects\cobbvault\node_modules\src\neon-http\session.ts:83:18)
+    at async main (C:\Projects\cobbvault\scripts\import-inbox.ts:304:17) {
+  query: 'select "id", "email" from "user" where "user"."email" = $1',
+  params: [ 'lance.climb@gmail.com' ],
+  cause: NeonDbError: Error connecting to database: TypeError: fetch failed
+      at mr.execute (C:\Projects\cobbvault\node_modules\@neondatabase\serverless\index.js:1294:95)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async <anonymous> (C:\Projects\cobbvault\node_modules\src\neon-http\session.ts:84:11)
+      at async NeonHttpPreparedQuery.queryWithCache (C:\Projects\cobbvault\node_modules\src\pg-core\session.ts:71:12)
+      at async NeonHttpPreparedQuery.execute (C:\Projects\cobbvault\node_modules\src\neon-http\session.ts:83:18)
+      at async main (C:\Projects\cobbvault\scripts\import-inbox.ts:304:17) {
+    severity: undefined,
+    code: undefined,
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: undefined,
+    line: undefined,
+    routine: undefined,
+    sourceError: [TypeError: fetch failed] { [cause]: [ConnectTimeoutError] }
+  }
+}
+
+=== Run @ 2026-05-26 02:32:08 ===
+
+> cobbvault@0.1.0 import:inbox
+> tsx --env-file=.env.local scripts/import-inbox.ts
+
+≡ƒô¡ Inbox empty: C:\Users\lance\Documents\Vault Inbox
+
+=== Run @ 2026-05-29 00:09:02 ===
+
+> cobbvault@0.1.0 import:inbox
+> tsx --env-file=.env.local scripts/import-inbox.ts
+
+≡ƒôé 12 files to process
+
+
+≡ƒôä AT&T Phone& Internet Account Numbers.png
+   Γ£ô AT&T ┬╖ no acct# ┬╖ no date ┬╖ bill
+   ΓåÆ matched: My AT&T App
+   Γ£ô uploaded + attached (48 KB)
+   Γ£ô moved ΓåÆ Imported/2026/2026-05-29 - AT&T Wireless & Internet.png
+
+≡ƒôä ATTBill_1736_Apr2026.pdf
+=== Run @ 2026-05-29 22:49:20 ===
+
+> cobbvault@0.1.0 import:inbox
+> tsx --env-file=.env.local scripts/import-inbox.ts
+
+≡ƒôé 12 files to process
+
+
+≡ƒôä ATTBill_1736_Apr2026.pdf
+   Γ£ô AT&T ┬╖ *1736 ┬╖ 2026-04-02 ┬╖ bill
+   ΓåÆ matched: My AT&T App
+   Γ£ô uploaded + attached (949 KB)
+   Γ£ô moved ΓåÆ Imported/2026/2026-04-02 - AT&T AT&T Mobility Wireless.pdf
+
+≡ƒôä ATTBill_1736_Dec2025.pdf
+   Γ£ô AT&T ┬╖ *1736 ┬╖ 2025-12-02 ┬╖ bill
+   ΓåÆ matched: My AT&T App
+   Γ£ô uploaded + attached (217 KB)
+   Γ£ô moved ΓåÆ Imported/2025/2025-12-02 - AT&T AT&T Mobility Wireless.pdf
+
+≡ƒôä ATTBill_1736_Feb2026.pdf
+   Γ£ô AT&T ┬╖ *1736 ┬╖ 2026-02-02 ┬╖ bill
+   ΓåÆ matched: My AT&T App
+   Γ£ô uploaded + attached (239 KB)
+   Γ£ô moved ΓåÆ Imported/2026/2026-02-02 - AT&T AT&T Mobility Wireless.pdf
+
+≡ƒôä ATTBill_1736_Jan2026.pdf
+   Γ£ô AT&T ┬╖ *1736 ┬╖ 2026-01-02 ┬╖ bill
+   ΓåÆ matched: My AT&T App
+   Γ£ô uploaded + attached (215 KB)
+   Γ£ô moved ΓåÆ Imported/2026/2026-01-02 - AT&T AT&T Mobility Wireless.pdf
+
+≡ƒôä ATTBill_1736_May2026.pdf
+   Γ£ô AT&T ┬╖ *1736 ┬╖ 2026-05-02 ┬╖ bill
+   ΓåÆ matched: My AT&T App
+   Γ£ô uploaded + attached (785 KB)
+   Γ£ô moved ΓåÆ Imported/2026/2026-05-02 - AT&T AT&T Mobility Wireless.pdf
+
+≡ƒôä ATTBill_1736_Nov2025.pdf
+   Γ£ô AT&T ┬╖ *1736 ┬╖ 2025-11-02 ┬╖ bill
+   ΓåÆ matched: My AT&T App
+   Γ£ô uploaded + attached (238 KB)
+   Γ£ô moved ΓåÆ Imported/2025/2025-11-02 - AT&T AT&T Mobility Wireless.pdf
+
+≡ƒôä ATTBill_6167_Apr2026.pdf
+   Γ£ô AT&T ┬╖ *6167 ┬╖ 2026-04-30 ┬╖ bill
+   ΓåÆ matched: My AT&T App
+   Γ£ô uploaded + attached (179 KB)
+   Γ£ô moved ΓåÆ Imported/2026/2026-04-30 - AT&T Internet 2000 (Fiber 2 GIG) Stand-alone.pdf
+
+≡ƒôä ATTBill_6167_Dec2025.pdf
+   Γ£ô AT&T ┬╖ *6167 ┬╖ 2025-12-31 ┬╖ bill
+   ΓåÆ matched: My AT&T App
+   Γ£ô uploaded + attached (177 KB)
+   Γ£ô moved ΓåÆ Imported/2025/2025-12-31 - AT&T Internet 2000 (Fiber 2 GIG) Stand-alone.pdf
+
+≡ƒôä ATTBill_6167_Feb2026.pdf
+   Γ£ô AT&T ┬╖ *6167 ┬╖ 2026-02-28 ┬╖ bill
+   ΓåÆ matched: My AT&T App
+   Γ£ô uploaded + attached (176 KB)
+   Γ£ô moved ΓåÆ Imported/2026/2026-02-28 - AT&T Internet 2000 (Fiber 2 GIG) Stand-alone.pdf
+
+≡ƒôä ATTBill_6167_Jan2026.pdf
+   Γ£ô AT&T ┬╖ *6167 ┬╖ 2026-01-31 ┬╖ bill
+   ΓåÆ matched: My AT&T App
+   Γ£ô uploaded + attached (176 KB)
+   Γ£ô moved ΓåÆ Imported/2026/2026-01-31 - AT&T Internet 2000 (Fiber 2 GIG) Stand-alone.pdf
+
+≡ƒôä ATTBill_6167_Mar2026.pdf
+   Γ£ô AT&T ┬╖ *6167 ┬╖ 2026-03-31 ┬╖ bill
+   ΓåÆ matched: My AT&T App
+   Γ£ô uploaded + attached (907 KB)
+   Γ£ô moved ΓåÆ Imported/2026/2026-03-31 - AT&T Internet 2000 (Fiber 2 GIG) Stand-alone.pdf
+
+≡ƒôä RecoveryBeforeAndroidStart.png
+   ? (unknown) ┬╖ no acct# ┬╖ no date ┬╖ other
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+Imported: 11    Needs review: 1    Errors: 0
+See C:\Users\lance\Documents\Vault File Drop\REVIEW.txt for details.
+
+=== Run @ 2026-05-30 02:32:10 ===
+
+> cobbvault@0.1.0 import:inbox
+> tsx --env-file=.env.local scripts/import-inbox.ts
+
+≡ƒôé 1 file to process
+
+
+≡ƒôä RecoveryBeforeAndroidStart.png
+   ? (unknown) ┬╖ no acct# ┬╖ no date ┬╖ other
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+Imported: 0    Needs review: 1    Errors: 0
+See C:\Users\lance\Documents\Vault File Drop\REVIEW.txt for details.
+node.exe : Assertion failed: !(handle->flags & UV_HANDLE_CLOSING), file src\win\async.c, line 76
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Assertion faile...sync.c, line 76:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+=== Run @ 2026-06-02 02:32:10 ===
+
+> cobbvault@0.1.0 import:inbox
+> tsx --env-file=.env.local scripts/import-inbox.ts
+
+≡ƒôé 1 file to process
+
+
+≡ƒôä RecoveryBeforeAndroidStart.png
+   ? (unknown) ┬╖ no acct# ┬╖ no date ┬╖ other
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+Imported: 0    Needs review: 1    Errors: 0
+See C:\Users\lance\Documents\Vault File Drop\REVIEW.txt for details.
+node.exe : Assertion failed: !(handle->flags & UV_HANDLE_CLOSING), file src\win\async.c, line 76
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Assertion faile...sync.c, line 76:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+=== Run @ 2026-06-03 02:32:09 ===
+
+> cobbvault@0.1.0 import:inbox
+> tsx --env-file=.env.local scripts/import-inbox.ts
+
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+Imported: 0    Needs review: 0    Errors: 0
+node.exe : Assertion failed: !(handle->flags & UV_HANDLE_CLOSING), file src\win\async.c, line 76
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Assertion faile...sync.c, line 76:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+=== Run @ 2026-06-04 03:12:19 ===
+
+> cobbvault@0.1.0 import:inbox
+> tsx --env-file=.env.local scripts/import-inbox.ts
+
+=== Run @ 2026-06-07 02:32:08 ===
+
+> cobbvault@0.1.0 import:inbox
+> tsx --env-file=.env.local scripts/import-inbox.ts
+
+≡ƒôé 31 files to process
+
+
+≡ƒôä 2023 Federal 1040 Lance & Heather.pdf
+   Γ£ô FreeTaxUSA ┬╖ no acct# ┬╖ 2023-12-31 ┬╖ tax
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä 2023 State Filing Lance & Heather.pdf
+   Γ£ô Georgia Department of Revenue ┬╖ no acct# ┬╖ 2023-12-31 ┬╖ tax
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä 2024 Federal 1040 Lance & Heather.pdf
+   Γ£ô FreeTaxUSA ┬╖ no acct# ┬╖ 2024-12-31 ┬╖ tax
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä 2024 Path to Change LLC Form 1120S  S Corps Tax Return_Filing Final.pdf
+   Γ£ô Internal Revenue Service ┬╖ no acct# ┬╖ 2024-12-31 ┬╖ tax
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä 2024 State Filing Lance & Heather.pdf
+   Γ£ô Georgia Department of Revenue ┬╖ no acct# ┬╖ 2024-12-31 ┬╖ tax
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä 2025 1120S FED & STATE FINAL.pdf
+   Γ£ô Path to Change LLC ┬╖ no acct# ┬╖ 2025-12-31 ┬╖ tax
+   ΓåÆ matched: IRS ΓÇö Path to Change LLC 1120-S Filings
+   Γ£ô uploaded + attached (393 KB)
+   Γ£ô moved ΓåÆ Imported/2025/2025-12-31 - Path to Change LLC 2025 U.S. S Corporation Income Tax Return (Form 1120-S).pdf
+
+≡ƒôä 2025_FEDERAL_RETURN_2026-04-27_070721.pdf
+   Γ£ô (unknown) ┬╖ no acct# ┬╖ 2025-12-31 ┬╖ tax
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä 2025_GA_RETURN_2026-04-27_070736.pdf
+   Γ£ô Georgia Department of Revenue ┬╖ no acct# ┬╖ 2025-12-31 ┬╖ tax
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä Final 2024 Balance Sheet.pdf
+   Γ£ô Path to Change, LLC ┬╖ no acct# ┬╖ 2024-12-31 ┬╖ other
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä Final 2024 Profit and Loss.pdf
+   Γ£ô Path to Change, LLC ┬╖ no acct# ┬╖ 2024-12-31 ┬╖ other
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä Final 2025 Balance Sheet.pdf
+   Γ£ô Path to Change, LLC ┬╖ no acct# ┬╖ 2025-12-31 ┬╖ other
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä Final 2025 Profit and Loss.pdf
+   Γ£ô Path to Change, LLC ┬╖ no acct# ┬╖ 2025-12-31 ┬╖ other
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä Heather_Cobb_Personal_Financial_Statement-BOA.pdf
+   Γ£ô Bank of America ┬╖ no acct# ┬╖ 2026-06-06 ┬╖ other
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä PFS form 6-25 Lance & Heather Cobb.pdf
+   Γ£ô SouthState Bank ┬╖ no acct# ┬╖ 2024-05-15 ┬╖ other
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä STMT_0254_20250131.pdf
+   Γ£ô Axos Bank ┬╖ *0254 ┬╖ 2025-02-02 ┬╖ bank_account
+   ΓåÆ matched: Axos Bank 0254
+   Γ£ô uploaded + attached (389 KB)
+   Γ£ô 7 transactions recorded
+   Γ£ô moved ΓåÆ Imported/2025/2025-02-02 - Axos Bank Rewards Checking.pdf
+
+≡ƒôä STMT_0254_20250228.pdf
+   Γ£ô Axos Bank ┬╖ *0254 ┬╖ 2025-03-02 ┬╖ bank_account
+   ΓåÆ matched: Axos Bank 0254
+   Γ£ô uploaded + attached (390 KB)
+   Γ£ô 13 transactions recorded
+   Γ£ô moved ΓåÆ Imported/2025/2025-03-02 - Axos Bank Rewards Checking.pdf
+
+≡ƒôä STMT_0254_20250331.pdf
+   Γ£ô Axos Bank ┬╖ *0254 ┬╖ 2025-03-31 ┬╖ bank_account
+   ΓåÆ matched: Axos Bank 0254
+   Γ£ô uploaded + attached (392 KB)
+   Γ£ô 20 transactions recorded
+   Γ£ô moved ΓåÆ Imported/2025/2025-03-31 - Axos Bank Rewards Checking.pdf
+
+≡ƒôä STMT_0254_20250430.pdf
+   Γ£ô Axos Bank ┬╖ *0254 ┬╖ 2025-04-30 ┬╖ bank_account
+   ΓåÆ matched: Axos Bank 0254
+   Γ£ô uploaded + attached (391 KB)
+   Γ£ô 17 transactions recorded
+   Γ£ô moved ΓåÆ Imported/2025/2025-04-30 - Axos Bank Rewards Checking.pdf
+
+≡ƒôä STMT_0254_20250530.pdf
+   Γ£ô Axos Bank ┬╖ *0254 ┬╖ 2025-06-01 ┬╖ bank_account
+   ΓåÆ matched: Axos Bank 0254
+   Γ£ô uploaded + attached (394 KB)
+   Γ£ô 32 transactions recorded
+   Γ£ô moved ΓåÆ Imported/2025/2025-06-01 - Axos Bank Rewards Checking.pdf
+
+≡ƒôä STMT_0254_20250630.pdf
+   Γ£ô Axos Bank ┬╖ *0254 ┬╖ 2025-06-30 ┬╖ bank_account
+   ΓåÆ matched: Axos Bank 0254
+   Γ£ô uploaded + attached (389 KB)
+   Γ£ô 8 transactions recorded
+   Γ£ô moved ΓåÆ Imported/2025/2025-06-30 - Axos Bank Rewards Checking.pdf
+
+≡ƒôä STMT_0254_20250731.pdf
+   Γ£ô Axos Bank ┬╖ *0254 ┬╖ 2025-07-31 ┬╖ bank_account
+   ΓåÆ matched: Axos Bank 0254
+   Γ£ô uploaded + attached (392 KB)
+   Γ£ô 19 transactions recorded
+   Γ£ô moved ΓåÆ Imported/2025/2025-07-31 - Axos Bank Rewards Checking.pdf
+
+≡ƒôä STMT_0254_20250829.pdf
+   Γ£ô Axos Bank ┬╖ *0254 ┬╖ 2025-09-01 ┬╖ bank_account
+   ΓåÆ matched: Axos Bank 0254
+   Γ£ô uploaded + attached (392 KB)
+   Γ£ô 26 transactions recorded
+   Γ£ô moved ΓåÆ Imported/2025/2025-09-01 - Axos Bank Rewards Checking.pdf
+
+≡ƒôä STMT_0254_20250930.pdf
+   Γ£ô Axos Bank ┬╖ *0254 ┬╖ 2025-09-30 ┬╖ bank_account
+   ΓåÆ matched: Axos Bank 0254
+   Γ£ô uploaded + attached (391 KB)
+   Γ£ô 14 transactions recorded
+   Γ£ô moved ΓåÆ Imported/2025/2025-09-30 - Axos Bank Rewards Checking.pdf
+
+≡ƒôä STMT_0254_20251031.pdf
+   Γ£ô Axos Bank ┬╖ *0254 ┬╖ 2025-11-02 ┬╖ bank_account
+   ΓåÆ matched: Axos Bank 0254
+   Γ£ô uploaded + attached (390 KB)
+   Γ£ô 13 transactions recorded
+   Γ£ô moved ΓåÆ Imported/2025/2025-11-02 - Axos Bank Rewards Checking.pdf
+
+≡ƒôä STMT_0254_20251128.pdf
+   Γ£ô Axos Bank ┬╖ *0254 ┬╖ 2025-11-30 ┬╖ bank_account
+   ΓåÆ matched: Axos Bank 0254
+   Γ£ô uploaded + attached (391 KB)
+   Γ£ô 13 transactions recorded
+   Γ£ô moved ΓåÆ Imported/2025/2025-11-30 - Axos Bank Rewards Checking.pdf
+
+≡ƒôä STMT_0254_20251231.pdf
+   Γ£ô Axos Bank ┬╖ *0254 ┬╖ 2025-12-31 ┬╖ bank_account
+   ΓåÆ matched: Axos Bank 0254
+   Γ£ô uploaded + attached (392 KB)
+   Γ£ô 23 transactions recorded
+   Γ£ô moved ΓåÆ Imported/2025/2025-12-31 - Axos Bank Rewards Checking.pdf
+
+≡ƒôä STMT_0254_20260130.pdf
+   Γ£ô Axos Bank ┬╖ *0254 ┬╖ 2026-02-01 ┬╖ bank_account
+   ΓåÆ matched: Axos Bank 0254
+   Γ£ô uploaded + attached (391 KB)
+   Γ£ô 19 transactions recorded
+   Γ£ô moved ΓåÆ Imported/2026/2026-02-01 - Axos Bank Rewards Checking (1).pdf
+
+≡ƒôä STMT_0254_20260227.pdf
+   Γ£ô Axos Bank ┬╖ *0254 ┬╖ 2026-03-01 ┬╖ bank_account
+   ΓåÆ matched: Axos Bank 0254
+   Γ£ô uploaded + attached (391 KB)
+   Γ£ô 15 transactions recorded
+   Γ£ô moved ΓåÆ Imported/2026/2026-03-01 - Axos Bank Rewards Checking (1).pdf
+
+≡ƒôä STMT_0254_20260331.pdf
+   Γ£ô Axos Bank ┬╖ *0254 ┬╖ 2026-03-31 ┬╖ bank_account
+   ΓåÆ matched: Axos Bank 0254
+   Γ£ô uploaded + attached (389 KB)
+   Γ£ô 6 transactions recorded
+   Γ£ô moved ΓåÆ Imported/2026/2026-03-31 - Axos Bank Rewards Checking (1).pdf
+
+≡ƒôä STMT_0254_20260430.pdf
+   Γ£ô Axos Bank ┬╖ *0254 ┬╖ 2026-04-30 ┬╖ bank_account
+   ΓåÆ matched: Axos Bank 0254
+   Γ£ô uploaded + attached (389 KB)
+   Γ£ô 5 transactions recorded
+   Γ£ô moved ΓåÆ Imported/2026/2026-04-30 - Axos Bank Rewards Checking (1).pdf
+
+≡ƒôä STMT_0254_20260529.pdf
+   Γ£ô Axos Bank ┬╖ *0254 ┬╖ 2026-05-31 ┬╖ bank_account
+   ΓåÆ matched: Axos Bank 0254
+   Γ£ô uploaded + attached (388 KB)
+   Γ£ô 3 transactions recorded
+   Γ£ô balance updated: $166.91 as of 2026-05-31
+   Γ£ô moved ΓåÆ Imported/2026/2026-05-31 - Axos Bank Rewards Checking.pdf
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+Imported: 18    Duplicates: 0    Needs review: 13    Errors: 0
+See C:\Users\lance\Documents\Vault File Drop\REVIEW.txt for details.
+
+=== Run @ 2026-06-09 02:32:09 ===
+
+> cobbvault@0.1.0 import:inbox
+> tsx --env-file=.env.local scripts/import-inbox.ts
+
+≡ƒôé 46 files to process
+
+
+≡ƒôä 2026-04-30 - Axos Bank High Yield Savings.pdf
+   Γ£ô Axos Bank ┬╖ *0262 ┬╖ 2026-04-30 ┬╖ bank_account
+   ΓåÆ matched: Axos Bank 0262
+   Γ£ô uploaded + attached (386 KB)
+   Γ£ô moved ΓåÆ Imported/2026/2026-04-30 - Axos Bank High Yield Savings.pdf
+
+≡ƒôä 2026-04-30 - Axos Bank Rewards Checking (1).pdf
+   ΓÜá duplicate of "STMT_0254_20260430.pdf" (already attached to "Axos Bank 0254" on 2026-06-07)
+   Γ£ô moved ΓåÆ Duplicates/2026/2026-04-30 - Axos Bank Rewards Checking (1).pdf (+ marker)
+
+≡ƒôä 2026-04-30 - Axos Bank Rewards Checking.pdf
+   ΓÜá duplicate of "STMT_0254_20260430.pdf" (already attached to "Axos Bank 0254" on 2026-06-07)
+   Γ£ô moved ΓåÆ Duplicates/2026/2026-04-30 - Axos Bank Rewards Checking.pdf (+ marker)
+
+≡ƒôä 2026-05-09 - Bank of America 2517.pdf
+   Γ£ô Bank of America ┬╖ *2517 ┬╖ 2026-05-09 ┬╖ credit_card
+   ΓåÆ matched: BofA Credit Card 2517
+   Γ£ô uploaded + attached (288 KB)
+   Γ£ô 118 transactions recorded
+   Γ£ô moved ΓåÆ Imported/2026/2026-05-09 - Bank of America 2517.pdf
+
+≡ƒôä 2026-05-26 - Bank of America Advantage Savings BofA Rewards Preferred Honors.pdf
+   Γ£ô Bank of America ┬╖ *0695 ┬╖ 2026-05-26 ┬╖ bank_account
+   ΓåÆ matched: BofA Savings 0695
+   Γ£ô uploaded + attached (270 KB)
+   Γ£ô 21 transactions recorded
+   Γ£ô moved ΓåÆ Imported/2026/2026-05-26 - Bank of America Advantage Savings BofA Rewards Preferred Honors.pdf
+
+≡ƒôä 2026-05-27 - Bank of America Adv Plus Banking BofA Rewards Preferred Honors.pdf
+   Γ£ô Bank of America ┬╖ *0202 ┬╖ 2026-05-27 ┬╖ bank_account
+   ΓåÆ matched: BofA Checking 0202
+   Γ£ô uploaded + attached (313 KB)
+   Γ£ô 135 transactions recorded
+   Γ£ô moved ΓåÆ Imported/2026/2026-05-27 - Bank of America Adv Plus Banking BofA Rewards Preferred Honors.pdf
+
+≡ƒôä 2026-05-31 - Axos Bank Rewards Checking.pdf
+   ΓÜá duplicate of "STMT_0254_20260529.pdf" (already attached to "Axos Bank 0254" on 2026-06-07)
+   Γ£ô moved ΓåÆ Duplicates/2026/2026-05-31 - Axos Bank Rewards Checking.pdf (+ marker)
+
+≡ƒôä 2026-05-31 - Bluevine Bluevine Business Checking (1).pdf
+   ΓÜá duplicate of "8845_May_2026_H&L_Havens.pdf" (already attached to "Bluevine Checking 8845 ΓÇö H&L Havens LLC" on 2026-06-07)
+   Γ£ô moved ΓåÆ Duplicates/2026/2026-05-31 - Bluevine Bluevine Business Checking (1).pdf (+ marker)
+
+≡ƒôä 2026-05-31 - Bluevine Bluevine Business Checking (SavingsSweep Account).pdf
+   ΓÜá duplicate of "8845_May_2026_H&L_Havens (1).pdf" (already attached to "Bluevine Checking 9058 ΓÇö Place of Grace LLC" on 2026-06-07)
+   Γ£ô moved ΓåÆ Duplicates/2026/2026-05-31 - Bluevine Bluevine Business Checking (SavingsSweep Account).pdf (+ marker)
+
+≡ƒôä 2026-05-31 - Bluevine Bluevine Business Checking Account.pdf
+   ΓÜá duplicate of "8845_May_2026_H&L_Havens (3).pdf" (already attached to "Bluevine Checking 6242 ΓÇö PTC Havens LLC" on 2026-06-07)
+   Γ£ô moved ΓåÆ Duplicates/2026/2026-05-31 - Bluevine Bluevine Business Checking Account.pdf (+ marker)
+
+≡ƒôä 2026-05-31 - Bluevine Bluevine Business Checking.pdf
+   ΓÜá duplicate of "8845_May_2026_H&L_Havens (2).pdf" (already attached to "Bluevine Checking 6628 ΓÇö H&L Havens LLC" on 2026-06-07)
+   Γ£ô moved ΓåÆ Duplicates/2026/2026-05-31 - Bluevine Bluevine Business Checking.pdf (+ marker)
+
+≡ƒôä Checking eStmt_2026-01-30.pdf
+   Γ£ô Bank of America ┬╖ *8486 ┬╖ 2026-01-31 ┬╖ bank_account
+   ΓåÆ matched: BofA Checking 8486 ΓÇö Path to Change LLC
+   Γ£ô uploaded + attached (285 KB)
+   Γ£ô 209 transactions recorded
+   Γ£ô moved ΓåÆ Imported/2026/2026-01-31 - Bank of America Business Advantage Fundamentals Banking Preferred Rewards for Bus Platinum Honors.pdf
+
+≡ƒôä Checking eStmt_2026-02-27.pdf
+   Γ£ô Bank of America ┬╖ *8486 ┬╖ 2026-02-28 ┬╖ bank_account
+   ΓåÆ matched: BofA Checking 8486 ΓÇö Path to Change LLC
+   Γ£ô uploaded + attached (270 KB)
+   Γ£ô 209 transactions recorded
+   Γ£ô moved ΓåÆ Imported/2026/2026-02-28 - Bank of America Business Advantage Fundamentals Banking Preferred Rewards for Bus Platinum Honors.pdf
+
+≡ƒôä Checking eStmt_2026-03-31.pdf
+   Γ£ô Bank of America ┬╖ *8486 ┬╖ 2026-03-31 ┬╖ bank_account
+   ΓåÆ matched: BofA Checking 8486 ΓÇö Path to Change LLC
+   Γ£ô uploaded + attached (298 KB)
+   Γ£ô 202 transactions recorded
+   Γ£ô moved ΓåÆ Imported/2026/2026-03-31 - Bank of America Business Advantage Fundamentals Banking Preferred Rewards for Bus Platinum Honors.pdf
+
+≡ƒôä Checking eStmt_2026-04-30.pdf
+   Γ£ô Bank of America ┬╖ *8486 ┬╖ 2026-04-30 ┬╖ bank_account
+   ΓåÆ matched: BofA Checking 8486 ΓÇö Path to Change LLC
+   Γ£ô uploaded + attached (258 KB)
+   Γ£ô 175 transactions recorded
+   Γ£ô moved ΓåÆ Imported/2026/2026-04-30 - Bank of America Business Advantage Fundamentals Banking Preferred Rewards for Bus Platinum Honors.pdf
+
+≡ƒôä Checking eStmt_2026-05-29.pdf
+   Γ£ô Bank of America ┬╖ *8486 ┬╖ 2026-05-31 ┬╖ bank_account
+   ΓåÆ matched: BofA Checking 8486 ΓÇö Path to Change LLC
+   Γ£ô uploaded + attached (275 KB)
+   Γ£ô 181 transactions recorded
+   Γ£ô moved ΓåÆ Imported/2026/2026-05-31 - Bank of America Business Advantage Fundamentals Banking Preferred Rewards for Bus Platinum Honors.pdf
+
+≡ƒôä domains 1.png
+   ? (unknown) ┬╖ no acct# ┬╖ no date ┬╖ other
+
+≡ƒôä domains 2.png
+   ? (unknown) ┬╖ no acct# ┬╖ no date ┬╖ other
+
+≡ƒôä domains 3.png
+   ? (unknown) ┬╖ no acct# ┬╖ no date ┬╖ other
+
+≡ƒôä domains 4.png
+   ? (unknown) ┬╖ no acct# ┬╖ no date ┬╖ other
+
+≡ƒôä eStmt_2026-04-30 (1).pdf
+   Γ£ô Bank of America ┬╖ *8486 ┬╖ 2026-04-30 ┬╖ bank_account
+   ΓåÆ matched: BofA Checking 8486 ΓÇö Path to Change LLC
+   Γ£ô uploaded + attached (258 KB)
+   Γ£ô 175 transactions recorded
+   Γ£ô moved ΓåÆ Imported/2026/2026-04-30 - Bank of America Business Advantage Fundamentals Banking Preferred Rewards for Bus Platinum Honors (1).pdf
+
+≡ƒôä eStmt_2026-05-29 (1).pdf
+   Γ£ô Bank of America ┬╖ *8486 ┬╖ 2026-05-31 ┬╖ bank_account
+   ΓåÆ matched: BofA Checking 8486 ΓÇö Path to Change LLC
+   Γ£ô uploaded + attached (275 KB)
+   Γ£ô 181 transactions recorded
+   Γ£ô moved ΓåÆ Imported/2026/2026-05-31 - Bank of America Business Advantage Fundamentals Banking Preferred Rewards for Bus Platinum Honors (1).pdf
+
+≡ƒôä IN_ 2025-02-24 - 202054007850.pdf
+   Γ£ô IONOS ┬╖ no acct# ┬╖ 2025-02-24 ┬╖ bill
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä IN_ 2026-02-01 - 202059965088.pdf
+   Γ£ô IONOS Inc. ┬╖ no acct# ┬╖ 2026-02-01 ┬╖ bill
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä IN_ 2026-02-01 - 202059965094.pdf
+   Γ£ô IONOS Inc. ┬╖ no acct# ┬╖ 2026-02-01 ┬╖ bill
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä IN_ 2026-02-01 - 202059965097.pdf
+   Γ£ô IONOS ┬╖ no acct# ┬╖ 2026-02-01 ┬╖ bill
+   ΓåÆ matched: IONOS MyWebsite Now Starter
+   Γ£ô uploaded + attached (33 KB)
+   Γ£ô moved ΓåÆ Imported/2026/2026-02-01 - IONOS IONOS MyWebsite Now Starter.pdf
+
+≡ƒôä IN_ 2026-02-22 - 202060402246.pdf
+   Γ£ô IONOS Inc. ┬╖ no acct# ┬╖ 2026-02-22 ┬╖ bill
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä IN_ 2026-02-24 - 202060441878.pdf
+   Γ£ô IONOS Inc. ┬╖ no acct# ┬╖ 2026-02-24 ┬╖ bill
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä IN_ 2026-03-01 - 202060554965.pdf
+   Γ£ô IONOS Inc. ┬╖ no acct# ┬╖ 2026-03-01 ┬╖ bill
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä IN_ 2026-03-01 - 202060554972.pdf
+   Γ£ô IONOS Inc. ┬╖ no acct# ┬╖ 2026-03-01 ┬╖ bill
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä IN_ 2026-03-01 - 202060554983.pdf
+   Γ£ô IONOS ┬╖ no acct# ┬╖ 2026-03-01 ┬╖ bill
+   ΓåÆ matched: IONOS MyWebsite Now Starter
+   Γ£ô uploaded + attached (33 KB)
+   Γ£ô moved ΓåÆ Imported/2026/2026-03-01 - IONOS IONOS MyWebsite Now Starter.pdf
+
+≡ƒôä IN_ 2026-04-01 - 202061122623.pdf
+   Γ£ô IONOS Inc. ┬╖ no acct# ┬╖ 2026-04-01 ┬╖ bill
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä IN_ 2026-04-01 - 202061129687.pdf
+   Γ£ô IONOS ┬╖ no acct# ┬╖ 2026-04-01 ┬╖ bill
+   ΓåÆ matched: IONOS MyWebsite Now Starter
+   Γ£ô uploaded + attached (33 KB)
+   Γ£ô moved ΓåÆ Imported/2026/2026-04-01 - IONOS IONOS MyWebsite Now Starter.pdf
+
+≡ƒôä IN_ 2026-04-01 - 202061129689.pdf
+   Γ£ô IONOS Inc. ┬╖ no acct# ┬╖ 2026-04-01 ┬╖ bill
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä IN_ 2026-05-01 - 202061855513.pdf
+   Γ£ô IONOS Inc. ┬╖ no acct# ┬╖ 2026-05-01 ┬╖ bill
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä IN_ 2026-05-01 - 202061855519.pdf
+   Γ£ô IONOS ┬╖ no acct# ┬╖ 2026-05-01 ┬╖ bill
+   ΓåÆ matched: IONOS Email Marketing Plus
+   Γ£ô uploaded + attached (33 KB)
+   Γ£ô moved ΓåÆ Imported/2026/2026-05-01 - IONOS IONOS Email Marketing Plus.pdf
+
+≡ƒôä IN_ 2026-05-01 - 202061855534.pdf
+   Γ£ô IONOS ┬╖ no acct# ┬╖ 2026-05-01 ┬╖ bill
+   ΓåÆ matched: IONOS MyWebsite Now Starter
+   Γ£ô uploaded + attached (33 KB)
+   Γ£ô moved ΓåÆ Imported/2026/2026-05-01 - IONOS IONOS MyWebsite Now Starter.pdf
+
+≡ƒôä IN_ 2026-06-01 - 202062466159.pdf
+   Γ£ô IONOS Inc. ┬╖ no acct# ┬╖ 2026-06-01 ┬╖ bill
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä IN_ 2026-06-01 - 202062466160.pdf
+   Γ£ô IONOS Inc. ┬╖ no acct# ┬╖ 2026-06-01 ┬╖ bill
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä IN_ 2026-06-01 - 202062466161.pdf
+   Γ£ô IONOS ┬╖ no acct# ┬╖ 2026-06-01 ┬╖ bill
+   ΓåÆ matched: IONOS MyWebsite Now Starter
+   Γ£ô uploaded + attached (33 KB)
+   Γ£ô moved ΓåÆ Imported/2026/2026-06-01 - IONOS IONOS MyWebsite Now Starter.pdf
+
+≡ƒôä IONOS invoice 2026-02-21 - IN_202060402246.pdf
+   Γ£ô IONOS Inc. ┬╖ no acct# ┬╖ 2026-02-22 ┬╖ bill
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä Savings eStmt_2026-01-30.pdf
+   Γ£ô Bank of America ┬╖ *8494 ┬╖ 2026-01-31 ┬╖ bank_account
+   ΓåÆ matched: BofA Savings 8494 ΓÇö Path to Change LLC
+   Γ£ô uploaded + attached (238 KB)
+   Γ£ô 4 transactions recorded
+   Γ£ô moved ΓåÆ Imported/2026/2026-01-31 - Bank of America Business Investment Account Preferred Rewards for Bus Platinum Honors.pdf
+
+≡ƒôä Savings eStmt_2026-02-27.pdf
+   Γ£ô Bank of America ┬╖ *8494 ┬╖ 2026-02-28 ┬╖ bank_account
+   ΓåÆ matched: BofA Savings 8494 ΓÇö Path to Change LLC
+   Γ£ô uploaded + attached (240 KB)
+   Γ£ô 4 transactions recorded
+   Γ£ô moved ΓåÆ Imported/2026/2026-02-28 - Bank of America Business Investment Account Preferred Rewards for Bus Platinum Honors.pdf
+
+≡ƒôä Savings eStmt_2026-03-31.pdf
+   Γ£ô Bank of America ┬╖ *8494 ┬╖ 2026-03-31 ┬╖ bank_account
+   ΓåÆ matched: BofA Savings 8494 ΓÇö Path to Change LLC
+   Γ£ô uploaded + attached (274 KB)
+   Γ£ô 2 transactions recorded
+   Γ£ô moved ΓåÆ Imported/2026/2026-03-31 - Bank of America Business Investment Account Preferred Rewards for Bus Platinum Honors.pdf
+
+≡ƒôä Savings eStmt_2026-04-30.pdf
+   Γ£ô Bank of America ┬╖ *8494 ┬╖ 2026-04-30 ┬╖ bank_account
+   ΓåÆ matched: BofA Savings 8494 ΓÇö Path to Change LLC
+   Γ£ô uploaded + attached (233 KB)
+   Γ£ô 3 transactions recorded
+   Γ£ô moved ΓåÆ Imported/2026/2026-04-30 - Bank of America Business Investment Account Preferred Rewards for Bus Platinum Honors.pdf
+
+≡ƒôä Savings eStmt_2026-05-29.pdf
+   Γ£ô Bank of America ┬╖ *8494 ┬╖ 2026-05-31 ┬╖ bank_account
+   ΓåÆ matched: BofA Savings 8494 ΓÇö Path to Change LLC
+   Γ£ô uploaded + attached (251 KB)
+   Γ£ô 1 transactions recorded
+   Γ£ô moved ΓåÆ Imported/2026/2026-05-31 - Bank of America Business Investment Account Preferred Rewards for Bus Platinum Honors.pdf
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+Imported: 22    Duplicates: 7    Needs review: 17    Errors: 0
+See C:\Users\lance\Documents\Vault File Drop\Duplicates\ for rejected duplicate files + .duplicate.txt markers.
+See C:\Users\lance\Documents\Vault File Drop\REVIEW.txt for details.
+
+=== Run @ 2026-06-13 02:32:09 ===
+
+> cobbvault@0.1.0 import:inbox
+> tsx --env-file=.env.local scripts/import-inbox.ts
+
+≡ƒôé 2 files to process
+
+
+≡ƒôä Invoice-N8DAZUUJ-0016.pdf
+   Γ£ô Vercel ┬╖ no acct# ┬╖ 2026-06-12 ┬╖ bill
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä Receipt-2614-6031.pdf
+   Γ£ô Vercel Inc. ┬╖ *1820 ┬╖ 2026-06-12 ┬╖ bill
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+Imported: 0    Duplicates: 0    Needs review: 2    Errors: 0
+See C:\Users\lance\Documents\Vault File Drop\REVIEW.txt for details.
+
+=== Run @ 2026-06-14 22:38:40 ===
+
+> cobbvault@0.1.0 import:inbox
+> tsx --env-file=.env.local scripts/import-inbox.ts
+
+≡ƒôé 2 files to process
+
+
+≡ƒôä Invoice-N8DAZUUJ-0016.pdf
+   Γ£ô Vercel ┬╖ no acct# ┬╖ 2026-06-12 ┬╖ bill
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä Receipt-2614-6031.pdf
+   Γ£ô Vercel Inc. ┬╖ *1820 ┬╖ 2026-06-12 ┬╖ bill
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+Imported: 0    Duplicates: 0    Needs review: 2    Errors: 0
+See C:\Users\lance\Documents\Vault File Drop\REVIEW.txt for details.
+
+=== Run @ 2026-06-16 22:20:52 ===
+=== Run @ 2026-06-17 02:32:09 ===
+
+> cobbvault@0.1.0 import:inbox
+> tsx --env-file=.env.local scripts/import-inbox.ts
+
+≡ƒÅª 21 files in banks/ ΓÇö attach-only, Haiku
+
+
+≡ƒôä AXOS IRA Lance December 2025 MAA813716.pdf
+   Γ£ô Matson Money, Inc. / Axos Clearing LLC ┬╖ *3716 ┬╖ 2025-12-31 ┬╖ brokerage
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä AXOS IRA Lance June 2025 MAA813716.pdf
+   Γ£ô Axos Advisor Services ┬╖ *3716 ┬╖ 2025-06-30 ┬╖ brokerage
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä AXOS IRA Lance March 2025 MAA813716.pdf
+   Γ£ô Matson Money, Inc. / Axos Clearing LLC ┬╖ *3716 ┬╖ 2025-03-31 ┬╖ brokerage
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä AXOS IRA Lance March 2026 MAA813716.pdf
+   Γ£ô Matson Money, Inc. / Axos Clearing LLC ┬╖ *3716 ┬╖ 2026-03-31 ┬╖ brokerage
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä AXOS IRA Lance September 2025 MAA813716.pdf
+   Γ£ô Matson Money, Inc. / Axos Clearing LLC ┬╖ *3716 ┬╖ 2025-09-30 ┬╖ brokerage
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä AXOS IRA Lance Trades 2025 MAA813716.pdf
+   Γ£ô Axos Clearing LLC ┬╖ *5671 ┬╖ 2025-04-11 ┬╖ brokerage
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä AXOS IRA Lance Trades 2026 MAA813716.pdf
+   Γ£ô Axos Clearing LLC ┬╖ *5671 ┬╖ 2026-04-10 ┬╖ brokerage
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä AXOS Joint Inv 03.2025 813721.pdf
+   Γ£ô Axos Clearing LLC / Matson Money ┬╖ *3721 ┬╖ 2025-03-31 ┬╖ brokerage
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä AXOS Joint Inv 03.2026 813721.pdf
+   Γ£ô Axos Clearing LLC / Matson Money, Inc. ┬╖ *3721 ┬╖ 2026-03-31 ┬╖ brokerage
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä AXOS Joint Inv 06.2025 813721.pdf
+   Γ£ô Axos Clearing LLC / Matson Money Inc. ┬╖ *3721 ┬╖ 2025-06-30 ┬╖ brokerage
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä AXOS Joint Inv 09.2025 813721.pdf
+   Γ£ô Matson Money, Inc. / Axos Clearing LLC ┬╖ *3721 ┬╖ 2025-09-30 ┬╖ brokerage
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä AXOS Joint Inv 12.2025 813721.pdf
+   Γ£ô Matson Money, Inc. / Axos Clearing LLC ┬╖ *3721 ┬╖ 2025-12-31 ┬╖ brokerage
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä Bluevine 6243 Kids April 2026.pdf
+   Γ£ô Bluevine Inc. (Coastal Community Bank) ┬╖ *6234 ┬╖ 2026-04-30 ┬╖ bank_account
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä Bluevine 6243 Kids December 2025.pdf
+   Γ£ô Bluevine Inc. ┬╖ *6234 ┬╖ 2025-12-31 ┬╖ bank_account
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä Bluevine 6243 Kids February 2026.pdf
+   Γ£ô Bluevine Inc. ┬╖ *6234 ┬╖ 2026-02-28 ┬╖ bank_account
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä Bluevine 6243 Kids January 2026.pdf
+   Γ£ô Bluevine Inc. ┬╖ *6234 ┬╖ 2026-01-31 ┬╖ bank_account
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä Bluevine 6243 Kids March 2026.pdf
+   Γ£ô Bluevine Inc. ┬╖ *6234 ┬╖ 2026-03-31 ┬╖ bank_account
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä Bluevine 6243 Kids May 2026.pdf
+   Γ£ô Bluevine Inc. ┬╖ *6234 ┬╖ 2026-05-31 ┬╖ bank_account
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä Bluevine 6243 Kids November 2025.pdf
+   Γ£ô Bluevine Inc. ┬╖ *6234 ┬╖ 2025-11-30 ┬╖ bank_account
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä Bluevine 6243 Kids October 2025.pdf
+   Γ£ô Bluevine Inc. ┬╖ *6234 ┬╖ 2025-10-31 ┬╖ bank_account
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+≡ƒôä Bluevine 9058 PoG October 2025.pdf
+   Γ£ô Bluevine Inc. ┬╖ *8579 ┬╖ 2025-10-31 ┬╖ bank_account
+   ΓÜá no matching vault entry ΓÇö left in inbox
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+Imported: 0    Duplicates: 0    Needs review: 21    Errors: 0
+See C:\Users\lance\Documents\Vault File Drop\REVIEW.txt for details.
+
+=== Run @ 2026-06-18 02:32:10 ===
+
+> cobbvault@0.1.0 import:inbox
+> tsx --env-file=.env.local scripts/import-inbox.ts
+
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+Imported: 0    Duplicates: 0    Needs review: 0    Errors: 0
+node.exe : Assertion failed: !(handle->flags & UV_HANDLE_CLOSING), file src\win\async.c, line 76
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Assertion faile...sync.c, line 76:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+=== Run @ 2026-06-19 08:24:11 ===
+
+> cobbvault@0.1.0 import:inbox
+> tsx --env-file=.env.local scripts/import-inbox.ts
+
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+Imported: 0    Duplicates: 0    Needs review: 0    Errors: 0
+node.exe : Assertion failed: !(handle->flags & UV_HANDLE_CLOSING), file src\win\async.c, line 76
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Assertion faile...sync.c, line 76:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+=== Run @ 2026-06-20 13:26:28 ===
+
+> cobbvault@0.1.0 import:inbox
+> tsx --env-file=.env.local scripts/import-inbox.ts
+
+=== Run @ 2026-06-21 17:31:08 ===
+
+> cobbvault@0.1.0 import:inbox
+> tsx --env-file=.env.local scripts/import-inbox.ts
+
+=== Run @ 2026-06-23 03:39:42 ===
+
+> cobbvault@0.1.0 import:inbox
+> tsx --env-file=.env.local scripts/import-inbox.ts
+
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+Imported: 0    Duplicates: 0    Needs review: 0    Errors: 0
+node.exe : Assertion failed: !(handle->flags & UV_HANDLE_CLOSING), file src\win\async.c, line 76
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Assertion faile...sync.c, line 76:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+=== Run @ 2026-06-24 11:22:00 ===
+
+> cobbvault@0.1.0 import:inbox
+> tsx --env-file=.env.local scripts/import-inbox.ts
+
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+Imported: 0    Duplicates: 0    Needs review: 0    Errors: 0
+node.exe : Assertion failed: !(handle->flags & UV_HANDLE_CLOSING), file src\win\async.c, line 76
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Assertion faile...sync.c, line 76:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+=== Run @ 2026-06-25 08:06:33 ===
+
+> cobbvault@0.1.0 import:inbox
+> tsx --env-file=.env.local scripts/import-inbox.ts
+
+node.exe : DrizzleQueryError: Failed query: select "id", "email" from "user" where "user"."email" = $1
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DrizzleQueryErr...r"."email" = $1:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+params: lance.climb@gmail.com
+    at NeonHttpPreparedQuery.queryWithCache (C:\Projects\cobbvault\node_modules\src\pg-core\session.ts:73:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async NeonHttpPreparedQuery.execute (C:\Projects\cobbvault\node_modules\src\neon-http\session.ts:83:18)
+    at async main (C:\Projects\cobbvault\scripts\import-inbox.ts:1153:17) {
+  query: 'select "id", "email" from "user" where "user"."email" = $1',
+  params: [ 'lance.climb@gmail.com' ],
+  cause: NeonDbError: Error connecting to database: TypeError: fetch failed
+      at mr.execute (C:\Projects\cobbvault\node_modules\@neondatabase\serverless\index.js:1294:95)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async <anonymous> (C:\Projects\cobbvault\node_modules\src\neon-http\session.ts:84:11)
+      at async NeonHttpPreparedQuery.queryWithCache (C:\Projects\cobbvault\node_modules\src\pg-core\session.ts:71:12)
+      at async NeonHttpPreparedQuery.execute (C:\Projects\cobbvault\node_modules\src\neon-http\session.ts:83:18)
+      at async main (C:\Projects\cobbvault\scripts\import-inbox.ts:1153:17) {
+    severity: undefined,
+    code: undefined,
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: undefined,
+    line: undefined,
+    routine: undefined,
+    sourceError: [TypeError: fetch failed] { [cause]: [ConnectTimeoutError] }
+  }
+}
+
+=== Run @ 2026-06-26 02:32:08 ===
+
+> cobbvault@0.1.0 import:inbox
+> tsx --env-file=.env.local scripts/import-inbox.ts
+
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+Imported: 0    Duplicates: 0    Needs review: 0    Errors: 0
+node.exe : Assertion failed: !(handle->flags & UV_HANDLE_CLOSING), file src\win\async.c, line 76
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Assertion faile...sync.c, line 76:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+=== Run @ 2026-06-27 02:32:09 ===
+
+> cobbvault@0.1.0 import:inbox
+> tsx --env-file=.env.local scripts/import-inbox.ts
+
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+Imported: 0    Duplicates: 0    Needs review: 0    Errors: 0
+node.exe : Assertion failed: !(handle->flags & UV_HANDLE_CLOSING), file src\win\async.c, line 76
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Assertion faile...sync.c, line 76:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+

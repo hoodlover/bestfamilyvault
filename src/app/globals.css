@@ -1,0 +1,501 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0c0a09;
+  --foreground: #f5f5f4;
+
+  /* ──── CobbVault icon-set palette ─────────────────────────────────────
+     Four glossy theme colours that match the icon set Lance ships with.
+     Use these for any new accent UI (section headers, chips, badges,
+     callouts) so the app stays visually tied to the icons. Each colour
+     has a -lite highlight + a -dark shade so components can build bevels
+     and hover states without inventing new hex codes.
+     ──────────────────────────────────────────────────────────────────── */
+  --vault-gold:      #D18A16;
+  --vault-gold-lite: #E7B24A;
+  --vault-gold-dark: #9A6208;
+
+  --vault-green:      #3E6C2F;
+  --vault-green-lite: #5E954B;
+  --vault-green-dark: #27441D;
+
+  --vault-blue:      #18486F;
+  --vault-blue-lite: #3E81B5;
+  --vault-blue-dark: #0E2D47;
+
+  --vault-red:      #8F2017;
+  --vault-red-lite: #B33A30;
+  --vault-red-dark: #5D1410;
+
+  --vault-metal:    #C7C7C7;
+  --vault-shadow:   #111111;
+}
+
+/* ────────────────────────────────────────────────────────────────────────
+   Per-user accent theme.
+   --------------------------------------------------------------------
+   The <html> root carries data-theme="forest|crimson|midnight|harvest"
+   (set server-side from users.theme_accent). Each block below defines
+   a full 50→950 lightness ramp for that theme. Tailwind classes like
+   bg-accent-700, text-accent-300, focus:ring-accent-600/50 etc. read
+   these via the @theme block further down, so switching the data-theme
+   attr repaints the entire app without a reload.
+
+   Defaulted to FOREST so a user without a setting (or an unauthenticated
+   page) still gets a sensible accent.
+   ──────────────────────────────────────────────────────────────────── */
+
+:root,
+[data-theme="forest"] {
+  --accent-50:  240 250 232;
+  --accent-100: 220 239 204;
+  --accent-200: 188 223 159;
+  --accent-300: 151 204 107;
+  --accent-400: 118 183 61;
+  --accent-500: 94  154 55;
+  --accent-600: 75  125 43;
+  --accent-700: 61  102 34;
+  --accent-800: 41   69 26;   /* user-picked 0x29451A */
+  --accent-900: 31   54 20;
+  --accent-950: 20   35 12;
+}
+
+[data-theme="crimson"] {
+  --accent-50:  254 242 242;
+  --accent-100: 254 226 226;
+  --accent-200: 254 202 202;
+  --accent-300: 252 165 165;
+  --accent-400: 248 113 113;
+  --accent-500: 220  38  38;
+  --accent-600: 185  28  28;
+  --accent-700: 151  21  21;
+  --accent-800: 113  17  17;   /* user-picked 0x711111 */
+  --accent-900:  91  15  15;
+  --accent-950:  63   8   8;
+}
+
+[data-theme="midnight"] {
+  --accent-50:  239 246 255;
+  --accent-100: 214 229 245;
+  --accent-200: 173 201 232;
+  --accent-300: 124 171 218;
+  --accent-400:  79 134 194;
+  --accent-500:  59 130 246;
+  --accent-600:  37  99 235;
+  --accent-700:  29  78 216;
+  --accent-800:  19   45  70;  /* user-picked 0x132D46 */
+  --accent-900:  14   34  55;
+  --accent-950:   8   22  40;
+}
+
+[data-theme="harvest"] {
+  --accent-50:  254 247 230;
+  --accent-100: 252 233 189;
+  --accent-200: 248 208 138;
+  --accent-300: 242 180  80;
+  --accent-400: 232 154  26;
+  --accent-500: 218 138  16;   /* user-picked 0xDA8A10 sits here */
+  --accent-600: 178 111  11;
+  --accent-700: 140  87   8;
+  --accent-800: 102  63   6;
+  --accent-900:  66  40   3;
+  --accent-950:  42  26   2;
+}
+
+/* NOTE: Signal re-skin (rerouting red errors / amber warnings away from
+   Crimson + Harvest accents to avoid visual collision) is intentionally
+   deferred. Threading through Tailwind's red and amber token families
+   requires more thought to keep forest + midnight themes pristine.
+   Errors and unsaved indicators stay red/amber for now; Crimson +
+   Harvest users will see some color overlap with those signals. Track
+   as a follow-up. */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* Accent color tier — every step reads from the active theme's
+     variables above. Tailwind v4 generates bg-accent-700, text-accent-
+     300, ring-accent-600, etc. The <alpha-value> placeholder is replaced
+     by Tailwind when the user writes a slash-opacity modifier like
+     bg-accent-700/40. */
+  --color-accent-50:  rgb(var(--accent-50)  / <alpha-value>);
+  --color-accent-100: rgb(var(--accent-100) / <alpha-value>);
+  --color-accent-200: rgb(var(--accent-200) / <alpha-value>);
+  --color-accent-300: rgb(var(--accent-300) / <alpha-value>);
+  --color-accent-400: rgb(var(--accent-400) / <alpha-value>);
+  --color-accent-500: rgb(var(--accent-500) / <alpha-value>);
+  --color-accent-600: rgb(var(--accent-600) / <alpha-value>);
+  --color-accent-700: rgb(var(--accent-700) / <alpha-value>);
+  --color-accent-800: rgb(var(--accent-800) / <alpha-value>);
+  --color-accent-900: rgb(var(--accent-900) / <alpha-value>);
+  --color-accent-950: rgb(var(--accent-950) / <alpha-value>);
+
+  /* Safety net — redefine Tailwind's emerald color tokens to map onto
+     the active accent variables. Every legacy bg-emerald-700, text-
+     emerald-300, focus:ring-emerald-600/50 etc. across the codebase
+     now repaints with the user's chosen theme automatically, no per-
+     file refactor needed. Pure emerald usage is intentionally rare in
+     this app, so blanket-mapping it is a controlled trade-off. */
+  --color-emerald-50:  rgb(var(--accent-50)  / <alpha-value>);
+  --color-emerald-100: rgb(var(--accent-100) / <alpha-value>);
+  --color-emerald-200: rgb(var(--accent-200) / <alpha-value>);
+  --color-emerald-300: rgb(var(--accent-300) / <alpha-value>);
+  --color-emerald-400: rgb(var(--accent-400) / <alpha-value>);
+  --color-emerald-500: rgb(var(--accent-500) / <alpha-value>);
+  --color-emerald-600: rgb(var(--accent-600) / <alpha-value>);
+  --color-emerald-700: rgb(var(--accent-700) / <alpha-value>);
+  --color-emerald-800: rgb(var(--accent-800) / <alpha-value>);
+  --color-emerald-900: rgb(var(--accent-900) / <alpha-value>);
+  --color-emerald-950: rgb(var(--accent-950) / <alpha-value>);
+
+  /* NOTE: Save-button classes use Tailwind's built-in `green-*` palette
+     directly (not emerald, which is remapped above to the per-user
+     accent). green-* is left untouched here so save buttons render as
+     a bright, theme-independent green on every accent. */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* Global print rule: anything marked .no-print disappears from the
+   printed page no matter where the @media print block on the page
+   itself defined it. Pages that need additional print-only styling
+   still add their own <style> block, but the chrome (sidebar, mobile
+   nav, floating user avatar, install banner, etc.) is hidden here so
+   every page benefits without each one re-declaring the class. */
+@media print {
+  .no-print { display: none !important; }
+  /* Default print colors: black ink, white paper. Pages can override
+     for header strips / shaded rows etc. */
+  html, body { background: #fff !important; color: #000 !important; }
+}
+
+/* ────────────────────────────────────────────────────────────────────
+   Accessibility: bump the dim text shades so they're readable on a
+   dark background by users with tired eyes. Targets ONLY text-stone-*
+   utilities — borders (border-stone-700) and backgrounds (bg-stone-500)
+   keep their original values, so the visual chrome doesn't change.
+
+   Hover/focus pseudo-class rules from Tailwind (e.g.
+   `.hover\:text-stone-300:hover`) have higher specificity than these
+   class selectors, so transitions on hover still work the way the
+   component intended.
+
+   Mapping rationale:
+     text-stone-500 ← stone-400 (#a8a29e)  — was barely readable; now is
+     text-stone-600 ← stone-400 (#a8a29e)  — was almost invisible; now matches 500
+     text-stone-700 ← stone-500 (#78716c)  — was nearly invisible; now subtly there
+
+   No opacity-modifier (`text-stone-500/40`) usage in the codebase as of
+   the v1.9.4 audit, so flat rgb here is safe. If we add one later,
+   convert these to use the `--color-stone-*` CSS-var route.
+   ──────────────────────────────────────────────────────────────────── */
+.text-stone-500 { color: rgb(168 162 158); }
+.text-stone-600 { color: rgb(168 162 158); }
+.text-stone-700 { color: rgb(120 113 108); }
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 12% 8%, rgb(20 83 45 / 0.28), transparent 30rem),
+    radial-gradient(circle at 88% 14%, rgb(180 83 9 / 0.18), transparent 26rem),
+    linear-gradient(135deg, #0c0a09 0%, #171412 46%, #050505 100%);
+}
+
+.vault-shell {
+  background:
+    linear-gradient(180deg, rgb(28 25 23 / 0.86), rgb(12 10 9 / 0.96)),
+    radial-gradient(circle at top right, rgb(16 185 129 / 0.12), transparent 26rem);
+}
+
+.vault-page {
+  width: min(100%, 72rem);
+  margin-inline: auto;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .vault-page {
+    padding: 2rem;
+  }
+}
+
+.vault-card {
+  border: 1px solid rgb(120 113 108 / 0.36);
+  background:
+    linear-gradient(145deg, rgb(41 37 36 / 0.82), rgb(28 25 23 / 0.74)),
+    radial-gradient(circle at top left, rgb(255 255 255 / 0.06), transparent 18rem);
+  box-shadow: 0 16px 40px rgb(0 0 0 / 0.18), inset 0 1px 0 rgb(255 255 255 / 0.04);
+}
+
+.vault-card-hover {
+  transition: border-color 160ms ease, background 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+
+.vault-card-hover:hover {
+  border-color: rgb(16 185 129 / 0.46);
+  transform: translateY(-1px);
+  box-shadow: 0 20px 48px rgb(0 0 0 / 0.24), inset 0 1px 0 rgb(255 255 255 / 0.06);
+}
+
+/* vault-kicker is the legacy alias for the brand kicker label — already
+   used in 60+ files. Aligned with .cv-kicker (mobile-redesign tokens) so
+   the spec's 11px / 0.16em / var(--cv-text-faint) propagates wherever the
+   class lives without per-file edits. */
+.vault-kicker {
+  font-size: 0.6875rem; /* 11px — matches the design token */
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgb(120 113 108);
+}
+
+/* ────────────────────────────────────────────────────────────────────────
+   Mobile redesign tokens — surface + motion vars used by the new bottom
+   tab bar and tools drawer. Scoped to .cv-* classes so they don't bleed
+   into existing components. The accent ramp already lives above; these
+   add the warm-stone surface ladder + the brand kicker treatment under
+   one class name.
+   ──────────────────────────────────────────────────────────────────── */
+:root {
+  --cv-surface-sheet: rgb(23 20 18 / 0.96);
+  --cv-border-subtle: rgb(120 113 108 / 0.18);
+  --cv-border-default: rgb(120 113 108 / 0.36);
+  --cv-border-accent: rgb(var(--accent-500) / 0.46);
+  --cv-text-faint: rgb(120 113 108);
+  --cv-ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --cv-dur-base: 200ms;
+  --cv-dur-slow: 320ms;
+}
+
+.cv-kicker {
+  font-size: 0.6875rem; /* 11px */
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--cv-text-faint);
+}
+
+/* Mobile tools menu — used to be a left-slide drawer; switched to a
+   slide-up bottom sheet so the menu rises FROM the tab bar (closer to
+   thumb, matches modern mobile pattern). .cv-sheet is the panel;
+   .cv-drawer-backdrop is the dim overlay behind it. Both honor
+   prefers-reduced-motion. */
+@keyframes cv-sheet-rise {
+  from { transform: translateY(100%); }
+  to   { transform: none; }
+}
+@keyframes cv-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.cv-sheet {
+  animation: cv-sheet-rise var(--cv-dur-slow) var(--cv-ease-out);
+}
+.cv-drawer-backdrop {
+  animation: cv-fade-in var(--cv-dur-base) ease-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .cv-sheet, .cv-drawer-backdrop { animation: none; }
+}
+
+
+* {
+  scrollbar-color: #57534e #0c0a09;
+  scrollbar-width: thin;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #0c0a09;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #57534e;
+  border: 2px solid #0c0a09;
+  border-radius: 999px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #78716c;
+}
+
+html { color-scheme: dark; }
+
+
+html, body, main, aside, nav, .overflow-y-auto, .overflow-x-auto {
+  scrollbar-color: #44403c #0c0a09 !important;
+  scrollbar-width: thin !important;
+}
+
+::-webkit-scrollbar {
+  width: 11px !important;
+  height: 11px !important;
+  background: #0c0a09 !important;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-corner {
+  background: #0c0a09 !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #44403c !important;
+  border: 2px solid #0c0a09 !important;
+  border-radius: 999px !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #78716c !important;
+}
+
+/* Idle easter egg: maverick truck towing a sign across the screen.
+   Two directions, picked at random per session. Both start slightly above
+   center, drift down to the mid-line, then continue off the opposite side.
+   Linear timing, slow enough to read.
+
+   RTL (default): truck enters from the right, exits left. Truck artwork
+   already faces left so no flip is needed.
+   LTR: truck enters from the left, exits right. Component flips the image
+   and reverses the flex order so the truck still leads with the sign
+   trailing behind. */
+@keyframes truck-drive-by-rtl {
+  0%   { transform: translate(110vw, -22vh); }
+  35%  { transform: translate(40vw, -6vh); }
+  60%  { transform: translate(8vw, 0); }
+  100% { transform: translate(-130vw, 0); }
+}
+
+@keyframes truck-drive-by-ltr {
+  0%   { transform: translate(-110vw, -22vh); }
+  35%  { transform: translate(-40vw, -6vh); }
+  60%  { transform: translate(-8vw, 0); }
+  100% { transform: translate(130vw, 0); }
+}
+
+/* Tiptap rich-text editor + display.
+   Tiptap is headless — it just emits semantic HTML and leaves styling to
+   the host. These rules cover the formatting tools the toolbar exposes:
+   bold/italic/underline/highlight, bullet + ordered lists, and task lists
+   (checkboxes). Tuned for the stone-950 / stone-100 dark theme. */
+/* Paragraph spacing intentionally small (was 0.75em — Lance flagged it as
+   leaving a "huge CR" between every line of an imported note). Tiptap
+   defaults Enter to splitBlock so every Enter became a paragraph; the
+   editor key swap below now maps Enter to a soft <br> instead, and this
+   margin keeps any intentional Shift+Enter paragraph break still visibly
+   distinct without dominating the layout. */
+.note-rich p { margin: 0 0 0.2em; }
+.note-rich p:last-child { margin-bottom: 0; }
+
+.note-rich strong { color: #f5f5f4; font-weight: 700; }
+.note-rich em { font-style: italic; }
+.note-rich u { text-decoration: underline; text-underline-offset: 2px; }
+.note-rich mark {
+  background: rgba(252, 211, 77, 0.35);   /* amber-300 @ ~35% */
+  color: inherit;
+  padding: 0 0.15em;
+  border-radius: 2px;
+}
+
+.note-rich h1, .note-rich h2, .note-rich h3 {
+  color: #fafaf9; font-weight: 600; line-height: 1.25;
+  margin: 1em 0 0.4em;
+}
+.note-rich h1 { font-size: 1.5em; }
+.note-rich h2 { font-size: 1.25em; }
+.note-rich h3 { font-size: 1.1em; }
+
+.note-rich ul, .note-rich ol {
+  margin: 0.4em 0 0.75em;
+  padding-left: 1.5em;
+}
+.note-rich ul { list-style: disc; }
+.note-rich ol { list-style: decimal; }
+.note-rich li { margin: 0.15em 0; padding-left: 0.25em; }
+.note-rich li > p { margin: 0; }
+.note-rich li::marker { color: #78716c; }
+
+/* Task list (checkboxes). Tiptap renders these as
+     <ul data-type="taskList"><li data-type="taskItem"><label><input type=checkbox></label><div>…</div></li></ul>
+   We strip the bullet, lay out the checkbox + content in a row, and bump
+   the checkbox to a tappable size on mobile. */
+.note-rich ul[data-type="taskList"] {
+  list-style: none;
+  padding-left: 0.25em;
+}
+.note-rich ul[data-type="taskList"] li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5em;
+  margin: 0.2em 0;
+}
+.note-rich ul[data-type="taskList"] li > label {
+  flex-shrink: 0;
+  margin-top: 0.2em;
+  user-select: none;
+}
+.note-rich ul[data-type="taskList"] li > div {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.note-rich ul[data-type="taskList"] li > label > input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+  accent-color: #047857;        /* emerald-700 */
+}
+/* Strike completed items so the visual state matches the data state. */
+.note-rich ul[data-type="taskList"] li[data-checked="true"] > div {
+  color: #78716c;               /* stone-500 */
+  text-decoration: line-through;
+}
+
+.note-rich blockquote {
+  border-left: 3px solid #44403c;   /* stone-700 */
+  padding-left: 0.75em;
+  color: #a8a29e;                   /* stone-400 */
+  margin: 0.5em 0;
+}
+
+.note-rich code {
+  font-family: var(--font-mono, ui-monospace, SFMono-Regular, monospace);
+  font-size: 0.9em;
+  background: rgba(120, 113, 108, 0.18);
+  padding: 0.1em 0.3em;
+  border-radius: 4px;
+}
+.note-rich pre {
+  background: rgba(28, 25, 23, 0.6);
+  border: 1px solid rgba(120, 113, 108, 0.3);
+  border-radius: 8px;
+  padding: 0.75em 1em;
+  margin: 0.75em 0;
+  overflow-x: auto;
+}
+.note-rich pre code { background: transparent; padding: 0; }
+
+/* Editing-mode hint when the editor is empty — Tiptap doesn't ship a
+   built-in placeholder for this case; we just hide the placeholder
+   <p class="is-editor-empty"> when content is present. */
+.note-rich .ProseMirror-focused { outline: none; }

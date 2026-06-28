@@ -1,0 +1,41 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "name": "Ask The Vault",
+          "summary": "Hands-free read access to your family vault.",
+          "description": "Ask your family vault for saved logins, account numbers, addresses, and notes. Pairs with the Cobb Family Vault (or any open-source fork) using the same one-time code flow as the browser extension. Private — only you and your household see it (Account Only distribution).",
+          "examplePhrases": [
+            "Alexa, ask the vault for the WiFi password",
+            "Alexa, ask the vault what's the garage code",
+            "Alexa, ask the vault for River's microchip number"
+          ],
+          "keywords": ["vault", "password", "family"],
+          "smallIconUri": "https://cobbvault.vercel.app/icons/cobb/icons/system/vault_extension.png",
+          "largeIconUri": "https://cobbvault.vercel.app/icons/cobb/icons/system/vault_extension.png"
+        }
+      },
+      "isAvailableWorldwide": false,
+      "testingInstructions": "Account-only skill — uses a paired bearer token to a private family vault instance.",
+      "category": "PRODUCTIVITY",
+      "distributionCountries": ["US"]
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "REPLACE_WITH_YOUR_LAMBDA_ARN",
+          "sslCertificateType": "Trusted"
+        }
+      }
+    },
+    "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "usesPersonalInfo": true,
+      "isChildDirected": false,
+      "isExportCompliant": true,
+      "containsAds": false
+    }
+  }
+}

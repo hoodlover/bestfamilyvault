@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- settingsActivity opens our PairActivity when the user taps the gear
+     next to "Cobb Vault Autofill" in Settings -> Passwords & accounts ->
+     Autofill service. -->
+<autofill-service
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:settingsActivity="com.cobbvault.autofill.PairActivity" />

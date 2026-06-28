@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+      Translucent theme for AuthActivity. BiometricPrompt floats over the
+      original app — the activity itself never shows visible chrome, so
+      the window must be transparent. Inherits from Material3 so
+      androidx.biometric's fragment-host can find the attributes it
+      expects (AppCompat / Material attrs).
+    -->
+    <style name="Theme.CobbVault.Translucent" parent="Theme.Material3.DayNight">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+</resources>

@@ -1,0 +1,43 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "the vault",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AskVaultIntent",
+          "slots": [
+            {
+              "name": "Question",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "{Question}",
+            "for {Question}",
+            "what is {Question}",
+            "what's {Question}",
+            "tell me {Question}",
+            "find {Question}",
+            "look up {Question}",
+            "where is {Question}",
+            "where do we keep {Question}",
+            "remind me {Question}"
+          ]
+        }
+      ],
+      "types": []
+    }
+  }
+}

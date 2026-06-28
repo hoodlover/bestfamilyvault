@@ -1,0 +1,66 @@
+{
+  "crons": [
+    {
+      "path": "/api/cron/reset-demo",
+      "schedule": "0 6 * * *"
+    },
+    {
+      "path": "/api/cron/sync-gmail-contacts",
+      "schedule": "0 * * * *"
+    },
+    {
+      "path": "/api/cron/weekly-digest",
+      "schedule": "0 18 * * 0"
+    },
+    {
+      "path": "/api/cron/recurring-reminders",
+      "schedule": "0 13 * * *"
+    },
+    {
+      "path": "/api/cron/statement-drop-reminders",
+      "schedule": "15 13 * * *"
+    },
+    {
+      "path": "/api/cron/detect-recurring",
+      "schedule": "0 21 * * 0"
+    },
+    {
+      "path": "/api/cron/prune-login-attempts",
+      "schedule": "30 13 * * *"
+    },
+    {
+      "path": "/api/cron/process-reminders",
+      "schedule": "*/5 * * * *"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/login",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store, max-age=0" },
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
+      ]
+    },
+    {
+      "source": "/register",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store, max-age=0" },
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
+      ]
+    },
+    {
+      "source": "/forgot-password",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store, max-age=0" },
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
+      ]
+    },
+    {
+      "source": "/reset-password",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store, max-age=0" },
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
+      ]
+    }
+  ]
+}

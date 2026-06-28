@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  RemoteViews layout for each row in the in-keyboard credential picker.
+
+  android.R.layout.simple_list_item_1 (the default) inherits the host
+  app's theme attributes, which renders unreadably on dark-keyboard /
+  high-contrast skins (Samsung One UI, system contrast bump, etc.) —
+  the row text frequently came up white-on-white. RemoteViews lets us
+  bake explicit colors in, so the picker stays legible everywhere.
+
+  RemoteViews supports a tightly limited set of widgets/attributes —
+  no styles, no margins, no drawableTint. Inline hex colors only.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="12dp"
+    android:background="#FF1C1917">
+
+    <!-- Vault badge — keeps the row recognisable when the user has
+         multiple autofill providers feeding the same keyboard suggestion
+         bar. Pure text so we don't have to bundle an icon drawable. -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🔑"
+        android:textSize="14sp"
+        android:paddingEnd="10dp" />
+
+    <TextView
+        android:id="@android:id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFAFAF9"
+        android:textSize="14sp"
+        android:singleLine="true"
+        android:ellipsize="end" />
+
+</LinearLayout>

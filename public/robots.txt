@@ -1,0 +1,5 @@
+# Family vault — not a public website. Tell every well-behaved crawler
+# to stay out. Already-indexed URLs need a separate "Remove URLs" request
+# in Google Search Console; this file only prevents future indexing.
+User-agent: *
+Disallow: /
