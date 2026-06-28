@@ -35,10 +35,10 @@ interface Props {
 // that already cached an illustrated icon at the v1 key re-resolve on
 // their next mount and pick up the new Pexels photo (or fall through
 // to the same icon if PEXELS_API_KEY isn't configured yet).
-const STORAGE_PREFIX = 'cobbvault:recipe-image-v2:'
+const STORAGE_PREFIX = 'bestfamilyvault:recipe-image-v2:'
 // Legacy entries get evicted lazily during cacheKey() lookups below so
 // the user's localStorage doesn't grow forever.
-const LEGACY_PREFIXES = ['cobbvault:recipe-icon:']
+const LEGACY_PREFIXES = ['bestfamilyvault:recipe-icon:']
 
 function cacheKey(title: string, tags: string[]): string {
   // Cheap stable key — title + sorted tags joined with a separator the

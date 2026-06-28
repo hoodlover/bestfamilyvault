@@ -39,7 +39,7 @@ interface WakeLockSentinelLike {
   released: boolean
 }
 
-const CACHE_KEY = (noteId: string, hash: string) => `cobbvault:cook-steps:${noteId}:${hash}`
+const CACHE_KEY = (noteId: string, hash: string) => `bestfamilyvault:cook-steps:${noteId}:${hash}`
 // Cap stored caches at a reasonable size so users don't run into
 // localStorage quotas after dozens of recipes. We only need a small
 // number — recent ones — and the API regenerates fresh on miss.
@@ -62,7 +62,7 @@ function writeCache(noteId: string, hash: string, steps: CookStep[]) {
   if (typeof window === 'undefined') return
   try {
     // Trim oldest cook-step caches if we're at the cap.
-    const allKeys = Object.keys(window.localStorage).filter((k) => k.startsWith('cobbvault:cook-steps:'))
+    const allKeys = Object.keys(window.localStorage).filter((k) => k.startsWith('bestfamilyvault:cook-steps:'))
     if (allKeys.length >= MAX_CACHED_RECIPES) {
       // FIFO eviction: drop the first key alphabetically (good enough — these are not time-stamped).
       allKeys.sort()

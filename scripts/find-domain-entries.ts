@@ -14,7 +14,7 @@ const DOMAINS = [
   'prompt-this-ai.com', 'prompts-r-us.com', 'getpromptin.com',
   'justprompt-it.com', 'building-with-ai.com', 'prompt-it-up.com',
   'ai-buildnow.com', 'ailiencode.app', 'hoodswebapps.com',
-  'thehoodcode.com', 'ailiencode.com', 'cobbfam.app', 'cobbvault.com',
+  'thehoodcode.com', 'ailiencode.com', 'cobbfam.app', 'bestfamilyvault.com',
   'hoodlove.app', 'pathtochange.app', 'cobbfamily.app', 'weekscreek.app',
   'path2invoice.com', 'pathinvoice.com', 'weekscreek.life',
   'weekscreekhaven.info', 'weekscreekrental.com', '421weekscreek.com',

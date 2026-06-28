@@ -10,11 +10,11 @@
 export const DEMO_PASSWORD = 'demo1234'
 
 export const DEMO_USERS = [
-  { email: 'demo@cobbvault.app', name: 'Demo Owner', role: 'superuser' as const },
-  { email: 'parent@cobbvault.app', name: 'Demo Parent', role: 'admin' as const },
-  { email: 'kid1@cobbvault.app', name: 'Demo Kid 1', role: 'member' as const },
-  { email: 'kid2@cobbvault.app', name: 'Demo Kid 2', role: 'member' as const },
-  { email: 'guest@cobbvault.app', name: 'Demo Guest', role: 'readonly' as const },
+  { email: 'demo@bestfamilyvault.app', name: 'Demo Owner', role: 'superuser' as const },
+  { email: 'parent@bestfamilyvault.app', name: 'Demo Parent', role: 'admin' as const },
+  { email: 'kid1@bestfamilyvault.app', name: 'Demo Kid 1', role: 'member' as const },
+  { email: 'kid2@bestfamilyvault.app', name: 'Demo Kid 2', role: 'member' as const },
+  { email: 'guest@bestfamilyvault.app', name: 'Demo Guest', role: 'readonly' as const },
 ]
 
 export const CATEGORIES = [

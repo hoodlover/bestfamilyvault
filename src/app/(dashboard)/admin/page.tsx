@@ -298,7 +298,7 @@ export default async function AdminPage() {
 
       {/* Maintenance — one-off diagnostic scripts wrapped as copy-to-
           clipboard buttons. Clicking grabs the PowerShell command; the
-          user pastes it in their terminal at C:\Projects\cobbvault. */}
+          user pastes it in their terminal at C:\Projects\bestfamilyvault. */}
       {isSuperuser && (
         <section className="mb-8 md:mb-10">
           <h2 className="text-sm font-semibold text-stone-500 uppercase tracking-wider mb-3">
@@ -312,7 +312,7 @@ export default async function AdminPage() {
                 duplicate copies of the same topic don&rsquo;t poison the fill wizard.
               </p>
               <CopyCommandButton
-                command="cd C:\Projects\cobbvault; npx tsx --env-file=.env.local scripts/dedupe-idnw-topics.ts"
+                command="cd C:\Projects\bestfamilyvault; npx tsx --env-file=.env.local scripts/dedupe-idnw-topics.ts"
                 label="Copy dupe-check command"
                 hint="Paste in PowerShell"
               />
@@ -324,7 +324,7 @@ export default async function AdminPage() {
                 Deletes the duplicates the dry-run found. Run only after the dry-run looks right.
               </p>
               <CopyCommandButton
-                command="cd C:\Projects\cobbvault; npx tsx --env-file=.env.local scripts/dedupe-idnw-topics.ts --apply"
+                command="cd C:\Projects\bestfamilyvault; npx tsx --env-file=.env.local scripts/dedupe-idnw-topics.ts --apply"
                 label="Copy dupe-cleanup command"
                 hint="Paste in PowerShell"
               />

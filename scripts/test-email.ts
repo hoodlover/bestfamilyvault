@@ -85,8 +85,8 @@ async function main() {
     const info = await transport.sendMail({
       from,
       to,
-      subject: 'Cobb Vault SMTP test',
-      text: 'If you can read this, outbound email from Cobb Vault works.',
+      subject: 'Best Family Vault SMTP test',
+      text: 'If you can read this, outbound email from Best Family Vault works.',
     })
     console.log('sendMail returned. Server response:')
     console.log(`  messageId: ${info.messageId}`)

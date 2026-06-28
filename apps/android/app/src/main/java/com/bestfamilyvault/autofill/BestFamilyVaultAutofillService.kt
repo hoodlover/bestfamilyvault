@@ -1,4 +1,4 @@
-package com.cobbvault.autofill
+package com.bestfamilyvault.autofill
 
 import android.app.PendingIntent
 import android.app.assist.AssistStructure
@@ -38,7 +38,7 @@ import java.util.concurrent.ConcurrentHashMap
  * each Dataset in an authentication IntentSender that runs BiometricPrompt
  * before the real values are released. Scaffolded here; not yet wired.
  */
-class CobbVaultAutofillService : AutofillService() {
+class BestFamilyVaultAutofillService : AutofillService() {
 
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
 
@@ -136,7 +136,7 @@ class CobbVaultAutofillService : AutofillService() {
                 // reach the form. Without this, a stolen unlocked phone
                 // could autofill the vault into any app — bad for a
                 // password manager.
-                val authIntent = Intent(this@CobbVaultAutofillService, AuthActivity::class.java).apply {
+                val authIntent = Intent(this@BestFamilyVaultAutofillService, AuthActivity::class.java).apply {
                     putExtra(AuthActivity.EXTRA_USERNAME, c.username ?: "")
                     putExtra(AuthActivity.EXTRA_PASSWORD, c.password ?: "")
                     putExtra(AuthActivity.EXTRA_TITLE, label)
@@ -144,7 +144,7 @@ class CobbVaultAutofillService : AutofillService() {
                     putExtra(AuthActivity.EXTRA_PASSWORD_ID, passwordId)
                 }
                 val pendingIntent = PendingIntent.getActivity(
-                    this@CobbVaultAutofillService,
+                    this@BestFamilyVaultAutofillService,
                     idx, // unique requestCode so PendingIntents don't collide
                     authIntent,
                     PendingIntent.FLAG_CANCEL_CURRENT or PendingIntent.FLAG_MUTABLE,
@@ -182,12 +182,12 @@ class CobbVaultAutofillService : AutofillService() {
             run {
                 val presentation = RemoteViews(packageName, R.layout.autofill_dataset_item)
                     .apply { setTextViewText(android.R.id.text1, "🔍  Search all my logins") }
-                val searchIntent = Intent(this@CobbVaultAutofillService, SearchActivity::class.java).apply {
+                val searchIntent = Intent(this@BestFamilyVaultAutofillService, SearchActivity::class.java).apply {
                     putExtra(SearchActivity.EXTRA_USERNAME_ID, usernameId)
                     putExtra(SearchActivity.EXTRA_PASSWORD_ID, passwordId)
                 }
                 val pi = PendingIntent.getActivity(
-                    this@CobbVaultAutofillService,
+                    this@BestFamilyVaultAutofillService,
                     1000 + creds.size, // requestCode distinct from the per-cred rows
                     searchIntent,
                     PendingIntent.FLAG_CANCEL_CURRENT or PendingIntent.FLAG_MUTABLE,
@@ -230,7 +230,7 @@ class CobbVaultAutofillService : AutofillService() {
 
     /**
      * Fires when the user accepts Android's native "Save password for
-     * Cobb Vault?" prompt. The framework hands us the latest snapshot of
+     * Best Family Vault?" prompt. The framework hands us the latest snapshot of
      * the form; we walk it to recover the typed username/password, derive
      * a title from the source (registrable domain for web, app label for
      * native), and POST to /api/clients/credentials. Cache is busted so

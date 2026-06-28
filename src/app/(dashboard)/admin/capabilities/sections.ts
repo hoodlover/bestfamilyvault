@@ -226,7 +226,7 @@ export const SECTIONS: Section[] = [
           { text: 'Editing the value appends a balance_history snapshot (appraisal log)' },
           { text: 'NetWorthItem.group derived from (type, accountType): checking / savings / ira / investment / bank_other / credit / house / car / asset_other' },
           { text: 'NetWorthCard renders one filter chip per present group + per-row include checkbox' },
-          { text: 'Exclusions persist in localStorage (cobbvault:netWorth:excludedGroups / excludedEntryIds) — per device' },
+          { text: 'Exclusions persist in localStorage (bestfamilyvault:netWorth:excludedGroups / excludedEntryIds) — per device' },
           { text: 'Filtered total shows "· filtered" badge; 30d delta hides while filters are active' },
         ],
       },

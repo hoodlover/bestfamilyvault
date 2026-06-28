@@ -1,4 +1,4 @@
-# Cobb Vault — Idea roadmap
+# Best Family Vault — Idea roadmap
 
 Ideas from brainstorm sessions. Pick a few at a time. Each item lists
 rough effort + which existing pieces it builds on.
@@ -149,8 +149,8 @@ subscribe to.
 
 ## Tier 5 — Voice / device integrations
 
-### Alexa Skill for Cobb Vault ⭐ (your jam)
-Custom private Skill talks to vault. *"Alexa, ask Cobb Vault what's the
+### Alexa Skill for Best Family Vault ⭐ (your jam)
+Custom private Skill talks to vault. *"Alexa, ask Best Family Vault what's the
 WiFi password"* → skill calls vault API → speaks the answer.
 
 Sensitive answers (full passwords, account numbers, SSN) get pushed to

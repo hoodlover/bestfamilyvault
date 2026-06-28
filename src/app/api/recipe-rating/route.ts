@@ -95,7 +95,7 @@ async function fetchHtml(url: string): Promise<string> {
     const res = await fetch(url, {
       signal: ctrl.signal,
       headers: {
-        'User-Agent': 'Mozilla/5.0 (compatible; CobbVault/1.0; +https://cobbvault.local)',
+        'User-Agent': 'Mozilla/5.0 (compatible; BestFamilyVault/1.0; +https://bestfamilyvault.local)',
         Accept: 'text/html,application/xhtml+xml',
       },
       redirect: 'follow',

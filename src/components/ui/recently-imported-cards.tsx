@@ -27,7 +27,7 @@ interface RecentItem {
   parentTitle: string
 }
 
-const LS_KEY = 'cobbvault.import.lastSeenAt'
+const LS_KEY = 'bestfamilyvault.import.lastSeenAt'
 
 export function RecentlyImportedCards({ items, days }: { items: RecentItem[]; days: number }) {
   const [lastSeenAt, setLastSeenAt] = useState<Date | null>(null)

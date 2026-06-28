@@ -36,7 +36,7 @@ Copy the 6-digit code. We'll use it in step 4.
    the contents of [`lambda/index.mjs`](lambda/index.mjs)
 7. Click **Deploy**
 8. Go to **Configuration → Environment variables → Edit → Add**:
-   - `VAULT_BASE_URL` = `https://cobbvault.vercel.app` (or your fork's URL)
+   - `VAULT_BASE_URL` = `https://bestfamilyvault.vercel.app` (or your fork's URL)
    - `VAULT_BEARER` = (we'll fill this in after step 4)
 9. Click **Save**
 10. **Copy the Function ARN** from the top-right of the page — we need
@@ -63,7 +63,7 @@ Copy the 6-digit code. We'll use it in step 4.
    extension does this automatically; for the Lambda we do it once
    manually via curl):
    ```bash
-   curl -X POST https://cobbvault.vercel.app/api/clients/pair/complete \
+   curl -X POST https://bestfamilyvault.vercel.app/api/clients/pair/complete \
      -H "Content-Type: application/json" \
      -d '{"code":"123456","name":"Echo (kitchen)","platform":"alexa"}'
    ```

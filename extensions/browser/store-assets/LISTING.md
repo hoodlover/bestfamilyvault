@@ -1,7 +1,7 @@
 # Chrome Web Store listing — Family Vault Autofill
 
 This folder is everything you need to submit the unlisted listing.
-Privacy-policy URL is **`https://cobbvault.vercel.app/extension`** —
+Privacy-policy URL is **`https://bestfamilyvault.vercel.app/extension`** —
 that page already covers what data is collected, where it lives, and
 the user-controlled retention story.
 
@@ -97,9 +97,9 @@ If you don't run a Family Vault, this extension does nothing
 for you — it has nothing to talk to. To set one up, the project
 README on GitHub has the deploy instructions.
 
-Source: https://github.com/hoodlover/cobbvault
-Help & install guide: https://cobbvault.vercel.app/extension
-Privacy policy: https://cobbvault.vercel.app/extension
+Source: https://github.com/hoodlover/bestfamilyvault
+Help & install guide: https://bestfamilyvault.vercel.app/extension
+Privacy policy: https://bestfamilyvault.vercel.app/extension
 ```
 
 ### Category
@@ -133,7 +133,7 @@ check exactly these:
                                   beyond the password field & form)
 
 **Single purpose** field:
-> Autofill the user's saved logins from their own self-hosted Cobb
+> Autofill the user's saved logins from their own self-hosted Best
 > Family Vault, and capture new logins on signup.
 
 **Permission justifications** (Chrome will ask per-permission):
@@ -141,7 +141,7 @@ check exactly these:
   • `storage` — bearer token + cached credentials list
   • `activeTab` + `scripting` — let the popup fill the focused tab's
     form on a one-click action by the user
-  • `host_permissions: https://cobbvault.vercel.app/*` — the only
+  • `host_permissions: https://bestfamilyvault.vercel.app/*` — the only
     host the extension talks to (vault API)
   • `<all_urls>` content script — needed to detect login forms on
     arbitrary websites; no page content is read or transmitted
@@ -217,7 +217,7 @@ the toolbar."**
   ☐ Paste the listing copy from the top of this file into the
     dashboard fields.
   ☐ Set visibility to `Unlisted`.
-  ☐ Set the privacy-policy URL to `https://cobbvault.vercel.app/extension`.
+  ☐ Set the privacy-policy URL to `https://bestfamilyvault.vercel.app/extension`.
   ☐ Fill the privacy-practices form per the table above.
   ☐ Submit for review. Typical turnaround for unlisted extensions:
     1–3 business days.

@@ -43,7 +43,7 @@ export interface LocateRowShape {
   isPrivate: boolean
 }
 
-// Per-area visual tone. Built from the four CobbVault icon-set cores
+// Per-area visual tone. Built from the four BestFamilyVault icon-set cores
 // (Gold / Maroon / Navy / Forest Green) plus their -lite variants — same
 // palette as the rest of the app, no off-palette accents. Values are raw
 // CSS colors so the rgb(... / 0.NN) opacity composes cleanly with the

@@ -160,7 +160,7 @@ async function main() {
   console.log()
   console.log('Next: copy the backup folder somewhere off-Vercel.')
   console.log(`  Robocopy: robocopy "${root}" "<destination>" /E`)
-  console.log(`  rclone:   rclone copy "${root}" remote:cobbvault-backups/${stamp}`)
+  console.log(`  rclone:   rclone copy "${root}" remote:bestfamilyvault-backups/${stamp}`)
 }
 
 main().then(() => process.exit(0)).catch((e) => { console.error(e); process.exit(1) })

@@ -18,7 +18,7 @@ interface Props {
 }
 
 export function WelcomeCard({ userId, firstName }: Props) {
-  const storageKey = `cobbvault.welcome-dismissed.${userId}`
+  const storageKey = `bestfamilyvault.welcome-dismissed.${userId}`
   // Default to hidden until we've checked localStorage; otherwise the
   // card flashes for everyone on every reload before being hidden again.
   const [show, setShow] = useState(false)

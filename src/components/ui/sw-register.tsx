@@ -19,7 +19,7 @@
 import { useEffect } from 'react'
 import { APP_VERSION } from '@/lib/branding'
 
-const VERSION_KEY = 'cobbvault-app-version'
+const VERSION_KEY = 'bestfamilyvault-app-version'
 
 export function ServiceWorkerRegister() {
   useEffect(() => {

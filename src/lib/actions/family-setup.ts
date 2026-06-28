@@ -47,7 +47,7 @@ The ${APP_NAME} is a custom web app I built. It runs on:
 
 - **Vercel** — hosts the web app. Bills my credit card around $72/month.
 - **Neon** — hosts the database (Postgres).
-- **GitHub** — holds the source code at https://github.com/hoodlover/cobbvault
+- **GitHub** — holds the source code at https://github.com/hoodlover/bestfamilyvault
 - **Vercel Blob** — holds every file attachment (PDFs, photos, videos).
 
 If any of those four go away without intervention, the vault stops working.

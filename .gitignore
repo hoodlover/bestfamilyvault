@@ -23,6 +23,7 @@
 # misc
 .DS_Store
 *.pem
+*.lnk
 
 # debug
 npm-debug.log*
@@ -58,6 +59,7 @@ analyze-sticky.mjs
 # One-off dry-run capture files
 preview.txt
 *.preview.txt
+/scripts/import-inbox-log.txt
 
 # Off-Vercel vault backups (DB JSON + blob inventory + optionally
 # downloaded blob bytes). Contains decrypted-on-import family data. Never commit.

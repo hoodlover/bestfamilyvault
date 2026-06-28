@@ -35,7 +35,7 @@ if (!email) {
   }
 
   const result = await sendPushToUser(u.id, {
-    title: 'Cobb Vault test',
+    title: 'Best Family Vault test',
     body: customBody ?? 'Manual test from the CLI.',
     url: '/dashboard',
     tag: 'cli-test',

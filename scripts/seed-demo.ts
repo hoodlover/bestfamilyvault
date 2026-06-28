@@ -67,7 +67,7 @@ async function main() {
     .returning({ id: users.id, email: users.email })
 
   const userByEmail = Object.fromEntries(insertedUsers.map((u) => [u.email!, u.id]))
-  const ownerId = userByEmail['demo@cobbvault.app']
+  const ownerId = userByEmail['demo@bestfamilyvault.app']
 
   console.log(`Seeded ${insertedUsers.length} users (login: any of them with password "${DEMO_PASSWORD}").`)
 

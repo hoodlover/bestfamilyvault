@@ -1,10 +1,10 @@
-# Cobb Vault — Operations Cheat Sheet
+# Best Family Vault — Operations Cheat Sheet
 
 Commands you'll actually run, grouped by tool. Copy-paste-ready.
 
 ---
 
-## PowerShell (local dev, in `c:\Projects\cobbvault`)
+## PowerShell (local dev, in `c:\Projects\bestfamilyvault`)
 
 ### Daily workflow
 
@@ -76,7 +76,7 @@ git push origin master                    # ships to prod
 
 ---
 
-## Neon SQL Editor (https://console.neon.tech → cobb-vault → SQL Editor)
+## Neon SQL Editor (https://console.neon.tech → bestfamilyvault → SQL Editor)
 
 ### Verify encryption (after running `npm run encrypt:existing`)
 
@@ -197,7 +197,7 @@ LIMIT 20;
 
 ---
 
-## Vercel Dashboard (https://vercel.com → cobbvault)
+## Vercel Dashboard (https://vercel.com → bestfamilyvault)
 
 ### Environment variables
 
@@ -212,7 +212,7 @@ Required vars:
 | `ENCRYPTION_KEY` | All environments | At-rest encryption key. Generate with `randomBytes(32).toString('base64')`. **Same value as `.env.local`.** |
 | `BLOB_READ_WRITE_TOKEN` | All environments | Vercel Blob credentials (auto-set if you use the Blob integration). |
 | `RESEND_API_KEY` | All environments | For dead-man's-switch emails (next session). |
-| `NEXT_PUBLIC_APP_NAME` | Optional | Override the app's display name (default "Cobb Family Vault"). |
+| `NEXT_PUBLIC_APP_NAME` | Optional | Override the app's display name (default "Best Family Vault"). |
 | `NEXT_PUBLIC_DEMO_MODE` | Don't set on prod | If `true`, shows a /demo route. Leave unset for the family vault. |
 
 After adding/editing any env var: **redeploy** (Settings → Deployments → ⋯ on latest → Redeploy). Env changes don't apply to existing builds.
@@ -226,8 +226,8 @@ After adding/editing any env var: **redeploy** (Settings → Deployments → ⋯
 ### Domain
 
 **Path:** Settings → Domains.
-- Default: `cobbvault.vercel.app`
-- Custom domain (e.g., `thecobbvault.com`) — add domain, configure DNS as instructed.
+- Default: `bestfamilyvault.vercel.app`
+- Custom domain (e.g., `thebestfamilyvault.com`) — add domain, configure DNS as instructed.
 
 ### Cron jobs (for the dead-man's-switch later)
 
@@ -292,8 +292,8 @@ UPDATE "user" SET password_hash='$2a$10$...thehash...' WHERE email='lance.climb@
 
 ## Reference
 
-- Repo: https://github.com/hoodlover/cobbvault
+- Repo: https://github.com/hoodlover/bestfamilyvault
 - Local dev URL: http://localhost:3000
 - Production URL: (whatever Vercel assigns + custom domain)
-- Neon project: cobb-vault (in LanceInvoicer org)
-- Vercel project: cobbvault (in your account)
+- Neon project: bestfamilyvault (create fresh; do not reuse the old vault DB)
+- Vercel project: bestfamilyvault (in your account)

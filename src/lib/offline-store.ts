@@ -5,7 +5,7 @@
 // Algorithm: PBKDF2-SHA256 (250k iterations) → AES-256-GCM. One snapshot is
 // kept per origin (overwrites on refresh).
 
-const DB_NAME = 'cobb-vault-offline'
+const DB_NAME = 'bestfamilyvault-offline'
 const DB_VERSION = 1
 const STORE = 'snapshot'
 const KEY = 'current'

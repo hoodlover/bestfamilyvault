@@ -381,5 +381,5 @@ chrome.runtime.onMessage.addListener((msg: Message, sender, sendResponse: (r: Re
 // First-install / browser-startup: nothing to bootstrap. The popup or
 // content script triggers everything on demand.
 chrome.runtime.onInstalled.addListener(() => {
-  console.log('[cobbvault] extension installed')
+  console.log('[bestfamilyvault] extension installed')
 })

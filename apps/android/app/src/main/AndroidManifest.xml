@@ -28,7 +28,7 @@
         <activity
             android:name=".AuthActivity"
             android:exported="false"
-            android:theme="@style/Theme.CobbVault.Translucent" />
+            android:theme="@style/Theme.BestFamilyVault.Translucent" />
 
         <!-- Search-vault fallback. Bio-gated full-screen list of every
              credential the user can see, with live filter as they type.
@@ -45,7 +45,7 @@
              hence the BIND_AUTOFILL_SERVICE permission. The meta-data points
              at the config (settings activity shown in system Autofill UI). -->
         <service
-            android:name=".CobbVaultAutofillService"
+            android:name=".BestFamilyVaultAutofillService"
             android:exported="true"
             android:permission="android.permission.BIND_AUTOFILL_SERVICE">
             <intent-filter>

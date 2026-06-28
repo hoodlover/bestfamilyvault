@@ -1,4 +1,4 @@
-package com.cobbvault.autofill
+package com.bestfamilyvault.autofill
 
 import android.content.Intent
 import android.graphics.drawable.GradientDrawable
@@ -38,7 +38,7 @@ private const val COLOR_ACCENT_TEXT = 0xFF052E1A.toInt() // emerald-950 (text on
  *   1. Opens "Linked Devices" in the vault, taps "Pair new device",
  *      reads off the 6-digit code.
  *   2. Types it here (with the vault URL + a device name), taps Pair.
- *   3. Taps "Enable Cobb Vault autofill" to set us as the system provider.
+ *   3. Taps "Enable Best Family Vault autofill" to set us as the system provider.
  *
  * Built programmatically to keep the scaffold dependency-light — swap for
  * a proper layout + Compose later if desired.
@@ -68,13 +68,13 @@ class PairActivity : AppCompatActivity() {
 
     private fun render() {
         root.removeAllViews()
-        addTitle("Cobb Vault Autofill")
+        addTitle("Best Family Vault Autofill")
         if (store.isPaired) renderPaired() else renderPairing()
     }
 
     private fun renderPairing() {
         addLabel("Vault URL")
-        val urlField = addField(prefill = store.baseUrl ?: "https://www.cobbvault.com")
+        val urlField = addField(prefill = store.baseUrl ?: "https://www.bestfamilyvault.com")
         addLabel("6-digit pairing code")
         val codeField = addField(prefill = "", numeric = true)
         addLabel("Device name")
@@ -99,8 +99,8 @@ class PairActivity : AppCompatActivity() {
         addText("Connected as ${store.userName ?: "your account"}.")
         addSpacer()
         status = addStatus()
-        addButton("Enable Cobb Vault autofill") { requestAutofillService() }
-        addText("If it doesn't open, set it manually: Settings → Passwords & accounts → Autofill service → Cobb Vault.")
+        addButton("Enable Best Family Vault autofill") { requestAutofillService() }
+        addText("If it doesn't open, set it manually: Settings → Passwords & accounts → Autofill service → Best Family Vault.")
         addSpacer()
         addButton("Unpair this device") {
             store.clear()

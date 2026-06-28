@@ -72,7 +72,7 @@ const DOMAINS: DomainRow[] = [
   { name: 'thehoodcode.com',        renewsAt: '2027-04-15' },
   { name: 'ailiencode.com',         renewsAt: '2027-04-15' },
   { name: 'cobbfam.app',            renewsAt: '2027-04-10' },
-  { name: 'cobbvault.com',          renewsAt: '2027-04-10' },
+  { name: 'bestfamilyvault.com',          renewsAt: '2027-04-10' },
   { name: 'hoodlove.app',           renewsAt: '2027-04-10' },
   { name: 'pathtochange.app',       renewsAt: '2027-04-10' },
   { name: 'cobbfamily.app',         renewsAt: '2027-04-10' },

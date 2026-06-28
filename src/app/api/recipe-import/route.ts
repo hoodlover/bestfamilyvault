@@ -160,7 +160,7 @@ async function fetchHtml(url: string): Promise<string> {
       signal: ctrl.signal,
       headers: {
         // Some sites gate behind a UA — pretend to be a normal browser.
-        'User-Agent': 'Mozilla/5.0 (compatible; CobbVault/1.0; +https://cobbvault.local)',
+        'User-Agent': 'Mozilla/5.0 (compatible; BestFamilyVault/1.0; +https://bestfamilyvault.local)',
         Accept: 'text/html,application/xhtml+xml',
       },
       redirect: 'follow',

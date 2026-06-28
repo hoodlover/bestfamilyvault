@@ -1,6 +1,6 @@
 // Bump alongside APP_VERSION in src/lib/branding.ts so the toolbar's version
 // number matches what the SW is actually serving.
-const CACHE_NAME = 'cobb-vault-v320'
+const CACHE_NAME = 'bestfamilyvault-v320'
 
 // Pages that must be available without network — currently just /offline,
 // the encrypted-IndexedDB read-only page family members can use during

@@ -56,7 +56,7 @@ export async function GET(request: Request) {
         }))
       )
       .returning({ id: users.id, email: users.email })
-    const ownerId = insertedUsers.find((u) => u.email === 'demo@cobbvault.app')!.id
+    const ownerId = insertedUsers.find((u) => u.email === 'demo@bestfamilyvault.app')!.id
 
     const insertedCategories = await db
       .insert(categories)

@@ -7,7 +7,7 @@
 // fine because icons are checked into git.
 //
 // Note: only files under /public are visible — anything you moved to
-// /cobbvault-backup is out of scope (it's no longer served to the
+// /bestfamilyvault-backup is out of scope (it's no longer served to the
 // browser). Copy back into /public/icons to make it browsable again.
 
 import 'server-only'

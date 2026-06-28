@@ -1,4 +1,4 @@
-package com.cobbvault.autofill
+package com.bestfamilyvault.autofill
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -11,7 +11,7 @@ import androidx.security.crypto.MasterKey
  * (AES256-GCM, key in the Android Keystore) rather than plain prefs.
  *
  * Stored fields:
- *   baseUrl   - vault origin, e.g. https://www.cobbvault.com (no trailing slash)
+ *   baseUrl   - vault origin, e.g. https://www.bestfamilyvault.com (no trailing slash)
  *   token     - bearer token returned by /api/clients/pair/complete
  *   sessionId - client_session id (for "revoke this device" later)
  *   userName  - display name ("Connected as Lance")
@@ -24,7 +24,7 @@ class SecureStore(context: Context) {
             .build()
         EncryptedSharedPreferences.create(
             context,
-            "cobbvault_secure",
+            "bestfamilyvault_secure",
             masterKey,
             EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
             EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM,

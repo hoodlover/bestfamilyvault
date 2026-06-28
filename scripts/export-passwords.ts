@@ -226,12 +226,12 @@ section.cat > h2 {
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>The Cobb Family Vault — Emergency Print (${stampForFile})</title>
+<title>The Best Family Vault — Emergency Print (${stampForFile})</title>
 <style>${css}</style>
 </head>
 <body>
 <header>
-  <h1>The Cobb Family Vault</h1>
+  <h1>The Best Family Vault</h1>
   <div class="meta">Emergency Print · Generated ${esc(stampHuman)}</div>
   <div class="meta">${allEntries.length} entries${includeNotes ? ` · ${allNotes.length} notes` : ''}</div>
   <div class="confidential">Confidential — Store in a Safe</div>
@@ -240,7 +240,7 @@ ${body}
 </body>
 </html>`
 
-  const filename = `cobb-vault-${stampForFile}.html`
+  const filename = `bestfamilyvault-${stampForFile}.html`
   const fullPath = path.join(outDir, filename)
   fs.writeFileSync(fullPath, html, 'utf8')
 

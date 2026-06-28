@@ -1,4 +1,4 @@
-package com.cobbvault.autofill
+package com.bestfamilyvault.autofill
 
 /**
  * Registrable-domain (eTLD+1) extraction, mirroring the browser extension's

@@ -25,7 +25,7 @@
 import { clsx } from 'clsx'
 import { useState, useLayoutEffect, useRef } from 'react'
 
-const STORAGE_KEY = 'cobbvault:mobile-hero-dismissed-at'
+const STORAGE_KEY = 'bestfamilyvault:mobile-hero-dismissed-at'
 const FRESH_WINDOW_MS = 24 * 60 * 60 * 1000   // 24 hours
 const SHOW_DURATION_MS = 30 * 1000             // 30 seconds before auto-collapse
 

@@ -33,7 +33,7 @@ export default async function IconsBrowserPage() {
               heading: 'What this shows',
               tips: [
                 { title: 'Every icon under /public/icons', description: 'Scanned at server start, grouped by folder. New icons appear after a redeploy / restart.' },
-                { title: 'Backed-up icons are hidden', description: 'Anything moved to /cobbvault-backup is out of scope. Copy back into /public/icons to make it browsable.' },
+                { title: 'Backed-up icons are hidden', description: 'Anything moved to /bestfamilyvault-backup is out of scope. Copy back into /public/icons to make it browsable.' },
               ],
             },
             {

@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "CobbVaultAutofill"
+rootProject.name = "BestFamilyVaultAutofill"
 include(":app")

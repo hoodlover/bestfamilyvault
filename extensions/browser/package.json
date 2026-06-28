@@ -1,5 +1,5 @@
 {
-  "name": "cobbvault-browser-extension",
+  "name": "bestfamilyvault-browser-extension",
   "version": "0.1.3",
   "private": true,
   "description": "Family Vault autofill extension. Detects login forms, asks the vault for matching credentials by domain, and fills them.",

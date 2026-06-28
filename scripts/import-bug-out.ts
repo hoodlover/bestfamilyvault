@@ -1,4 +1,4 @@
-// Bulk-import Lance's "Bug Out Folder" into Cobb Vault.
+// Bulk-import Lance's "Bug Out Folder" into Best Family Vault.
 //
 // Walks C:\Users\lance\Documents\4625 Forest Place\Bug Out Folder, creates
 // subcategories under the existing "End of the World" category to mirror the

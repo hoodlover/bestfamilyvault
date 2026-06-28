@@ -138,7 +138,7 @@ async function sendNewDeviceEmail(params: {
     `Device:      ${ua}`,
     '',
     `If this was you, no action needed.`,
-    `If it wasn't, sign in and change your password immediately at https://cobbvault.com/settings.`,
+    `If it wasn't, sign in and change your password immediately at https://bestfamilyvault.com/settings.`,
   ].join('\n')
   const html = `
     <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 560px;">
@@ -150,7 +150,7 @@ async function sendNewDeviceEmail(params: {
         <tr><td style="padding: 4px 12px 4px 0; color: #666;">Device</td><td><code>${ua}</code></td></tr>
       </table>
       <p>If this was you, no action needed.</p>
-      <p>If it wasn't, sign in and <a href="https://cobbvault.com/settings">change your password immediately</a>.</p>
+      <p>If it wasn't, sign in and <a href="https://bestfamilyvault.com/settings">change your password immediately</a>.</p>
     </div>
   `
   await sendEmail({ to: email, subject, text, html })

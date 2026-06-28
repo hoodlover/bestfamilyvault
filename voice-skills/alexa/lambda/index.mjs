@@ -4,7 +4,7 @@
 //   - Runtime: Node.js 20.x
 //   - Handler: index.handler
 //   - Env vars (set in Lambda console):
-//       VAULT_BASE_URL    e.g. https://cobbvault.vercel.app
+//       VAULT_BASE_URL    e.g. https://bestfamilyvault.vercel.app
 //       VAULT_BEARER      paste from /settings → Linked Devices → Pair new device
 //                         (use the same pairing flow as the browser extension;
 //                         get a fresh code, complete it as platform="alexa")

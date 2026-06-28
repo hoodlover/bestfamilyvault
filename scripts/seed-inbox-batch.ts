@@ -13,7 +13,7 @@
 //      Filings, IRS, Documents). Then create entry "Place of Grace LLC
 //      Name Reservation" under Place of Grace LLC > Startup Docs. Attach
 //      PDF.
-//   4. Vault Color Scheme.png → create a "Cobb Vault Setup Notes" row in
+//   4. Vault Color Scheme.png → create a "Best Family Vault Setup Notes" row in
 //      the notes table under How Tos, with the PNG attached. Lets Lance
 //      reference the color palette inside the vault itself when tweaking
 //      future UI.
@@ -294,11 +294,11 @@ function moveToImported(filepath: string) {
     moveToImported(POG_PATH)
   }
 
-  // ─── 4. Vault Color Scheme PNG → Cobb Vault Setup Notes ─────
+  // ─── 4. Vault Color Scheme PNG → Best Family Vault Setup Notes ─────
   if (!fs.existsSync(COLOR_PATH)) {
     console.log(`\n(skip Color Scheme — ${COLOR_FILE} no longer in inbox)`)
   } else {
-    console.log(`\n  Cobb Vault Setup Notes`)
+    console.log(`\n  Best Family Vault Setup Notes`)
     const howTos = await db
       .select({ id: categories.id })
       .from(categories)
@@ -316,7 +316,7 @@ function moveToImported(filepath: string) {
       .where(
         and(
           eq(notes.createdBy, owner.id),
-          eq(notes.title, 'Cobb Vault Setup Notes'),
+          eq(notes.title, 'Best Family Vault Setup Notes'),
         ),
       )
       .limit(1)
@@ -327,9 +327,9 @@ function moveToImported(filepath: string) {
         .insert(notes)
         .values({
           categoryId: howTos.id,
-          title: 'Cobb Vault Setup Notes',
+          title: 'Best Family Vault Setup Notes',
           content:
-            'Reference notes for Cobb Vault setup, theming, and customization.\n\n' +
+            'Reference notes for Best Family Vault setup, theming, and customization.\n\n' +
             '**Color Scheme:** See attached `Vault Color Scheme.png` for the palette ' +
             'used across the app (action-tile accents, banner gradients, dark-mode ' +
             'stone backdrops, the per-user accent ramp for Forest/Crimson/Midnight/' +

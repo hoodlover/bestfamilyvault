@@ -23,7 +23,7 @@ a. Open the vault on your phone or computer:
 
 b. From any computer terminal:
    ```bash
-   curl -X POST https://cobbvault.vercel.app/api/clients/pair/complete \
+   curl -X POST https://bestfamilyvault.vercel.app/api/clients/pair/complete \
      -H "Content-Type: application/json" \
      -d '{"code":"123456","name":"Lance iPhone (Siri)","platform":"siri"}'
    ```
@@ -44,7 +44,7 @@ b. From any computer terminal:
 
    **Action 2 — Get Contents of URL**
    - Search "Get contents of URL"
-   - URL: `https://cobbvault.vercel.app/api/clients/voice/ask`
+   - URL: `https://bestfamilyvault.vercel.app/api/clients/voice/ask`
    - Tap **Show More**:
      - Method: **POST**
      - Headers:

@@ -1,11 +1,11 @@
 /**
- * Import Sticky Password XML export into CobbVault.
+ * Import Sticky Password XML export into BestFamilyVault.
  *
  * Usage:
  *   npx tsx --env-file=.env.local scripts/import-sticky.ts <path-to-xml> <userEmail>
  *
  * Example:
- *   npx tsx --env-file=.env.local scripts/import-sticky.ts "C:/users/lance/documents/stickypass.xml" lance@cobbvault.com
+ *   npx tsx --env-file=.env.local scripts/import-sticky.ts "C:/users/lance/documents/stickypass.xml" lance@bestfamilyvault.com
  *
  * What it imports:
  *   - Accounts (web logins) → login entries, skipping bookmarks & android:// URIs

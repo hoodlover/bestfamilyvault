@@ -6,10 +6,10 @@ import { Sparkles, ArrowRight, Eye, ShieldAlert } from 'lucide-react'
 import { APP_NAME } from '@/lib/branding'
 
 const DEMO_ROLES = [
-  { email: 'demo@cobbvault.app', label: 'Owner', sub: 'Superuser — sees everything', recommended: true },
-  { email: 'parent@cobbvault.app', label: 'Parent', sub: 'Admin — manages family' },
-  { email: 'kid1@cobbvault.app', label: 'Kid 1', sub: 'Member — limited view' },
-  { email: 'guest@cobbvault.app', label: 'Guest', sub: 'Read-only — can browse, can\'t edit' },
+  { email: 'demo@bestfamilyvault.app', label: 'Owner', sub: 'Superuser — sees everything', recommended: true },
+  { email: 'parent@bestfamilyvault.app', label: 'Parent', sub: 'Admin — manages family' },
+  { email: 'kid1@bestfamilyvault.app', label: 'Kid 1', sub: 'Member — limited view' },
+  { email: 'guest@bestfamilyvault.app', label: 'Guest', sub: 'Read-only — can browse, can\'t edit' },
 ]
 
 const DEMO_PASSWORD = 'demo1234'

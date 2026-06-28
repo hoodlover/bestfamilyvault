@@ -5,7 +5,7 @@
   "description": "Autofill saved passwords from your Family Vault on any website.",
   "permissions": ["storage", "activeTab", "scripting", "clipboardWrite"],
   "host_permissions": [
-    "https://cobbvault.vercel.app/*",
+    "https://bestfamilyvault.vercel.app/*",
     "http://localhost:3000/*"
   ],
   "background": {

@@ -2,7 +2,7 @@
 // can serve it as a download to family members on new devices.
 //
 // Two blobs land in storage:
-//   extension/cobbvault-vault-extension-v<version>-<rand>.zip  (the build)
+//   extension/bestfamilyvault-vault-extension-v<version>-<rand>.zip  (the build)
 //   extension/manifest.json                                    (stable URL)
 //
 // manifest.json is overwritten in place every publish and points at the
@@ -56,7 +56,7 @@ async function main() {
   const buf = zip.toBuffer()
   const sizeKb = (buf.length / 1024).toFixed(1)
 
-  const zipName = `cobbvault-vault-extension-v${version}.zip`
+  const zipName = `bestfamilyvault-vault-extension-v${version}.zip`
   console.log(`Uploading ${zipName} (${sizeKb} KB)…`)
   // Private store — vault serves the download via /api/extension/download,
   // which auths the request and proxies the bytes from blob with the

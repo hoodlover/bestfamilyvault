@@ -1,4 +1,4 @@
-package com.cobbvault.autofill
+package com.bestfamilyvault.autofill
 
 import android.app.Activity
 import android.content.Intent
@@ -98,7 +98,7 @@ class AuthActivity : AppCompatActivity() {
         })
 
         val info = BiometricPrompt.PromptInfo.Builder()
-            .setTitle("Fill from Cobb Vault")
+            .setTitle("Fill from Best Family Vault")
             .setSubtitle(title)
             .setDescription("Verify it's you before the password fills.")
             .setAllowedAuthenticators(allowedAuthenticators)

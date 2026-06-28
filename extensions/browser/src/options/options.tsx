@@ -150,7 +150,7 @@ function App() {
             type="text"
             value={baseUrl}
             onChange={(e) => setBaseUrl(e.target.value)}
-            placeholder="https://cobbvault.vercel.app"
+            placeholder="https://bestfamilyvault.vercel.app"
           />
         </div>
         <button className="ghost" onClick={saveBaseUrl}>Save</button>

@@ -6,7 +6,7 @@ import { syncVaultInboxNow } from '@/lib/actions/vault-inbox'
 
 // PowerShell one-liner — chains cd + the npm script so the user pastes once
 // and runs once. `;` works in both 5.1 and 7; `&&` is unavailable in 5.1.
-const REMOTE_SYNC_COMMAND = 'cd C:\\Projects\\cobbvault; npm run import:inbox'
+const REMOTE_SYNC_COMMAND = 'cd C:\\Projects\\bestfamilyvault; npm run import:inbox'
 
 export function VaultInboxSyncPanel({ available = true }: { available?: boolean }) {
   const [isPending, startTransition] = useTransition()

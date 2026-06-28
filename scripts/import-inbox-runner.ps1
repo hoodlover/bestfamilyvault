@@ -3,20 +3,20 @@
 #
 # To install (once):
 #   1. Open Task Scheduler → Create Basic Task
-#   2. Name: "Cobb Vault — import inbox"
+#   2. Name: "Best Family Vault — import inbox"
 #   3. Trigger: Daily at e.g. 2:00 AM
 #   4. Action: Start a program
 #      Program: powershell.exe
-#      Arguments:  -NoProfile -ExecutionPolicy Bypass -File "C:\Projects\cobbvault\scripts\import-inbox-runner.ps1"
-#      Start in:   C:\Projects\cobbvault
+#      Arguments:  -NoProfile -ExecutionPolicy Bypass -File "C:\Projects\bestfamilyvault\scripts\import-inbox-runner.ps1"
+#      Start in:   C:\Projects\bestfamilyvault
 #   5. Finish — done.
 #
 # Re-run on demand any time with:
 #   npm run import:inbox
 
 $ErrorActionPreference = 'Continue'
-Set-Location "C:\Projects\cobbvault"
-$log = "C:\Projects\cobbvault\scripts\import-inbox-log.txt"
+Set-Location "C:\Projects\bestfamilyvault"
+$log = "C:\Projects\bestfamilyvault\scripts\import-inbox-log.txt"
 $ts = Get-Date -Format 'yyyy-MM-dd HH:mm:ss'
 "=== Run @ $ts ===" | Out-File -FilePath $log -Append -Encoding utf8
 npm run import:inbox 2>&1 | Out-File -FilePath $log -Append -Encoding utf8

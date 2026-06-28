@@ -77,7 +77,7 @@ function downloadTemplate() {
   const blob = new Blob([lines.join('\n')], { type: 'text/csv' })
   const a = document.createElement('a')
   a.href = URL.createObjectURL(blob)
-  a.download = 'cobbvault-entries-template.csv'
+  a.download = 'bestfamilyvault-entries-template.csv'
   a.click()
 }
 

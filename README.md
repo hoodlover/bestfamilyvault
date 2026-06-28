@@ -1,4 +1,4 @@
-# The Cobb Vault
+# The Best Family Vault
 
 A self-hosted family password manager + notes + grouped credentials, built as a PWA with Next.js (App Router), Drizzle ORM, and Neon Postgres. Personal vaults, shared categories, merge multiple family logins for the same site into one card.
 
@@ -17,8 +17,8 @@ Create a free Neon Postgres project (https://neon.tech) and copy its `DATABASE_U
 ### 2. Local dev
 
 ```bash
-git clone https://github.com/hoodlover/cobbvault.git
-cd cobbvault
+git clone https://github.com/hoodlover/bestfamilyvault.git
+cd bestfamilyvault
 npm install
 cp .env.example .env.local        # then paste DATABASE_URL + NEXTAUTH_SECRET
 npm run db:push                   # apply schema to your Neon DB
@@ -38,8 +38,8 @@ Open http://localhost:3000. The very first time, you'll need a superuser — cre
 Two Vercel projects + two Neon DBs.
 
 ```
-production  ─►  cobbvault-real     ─►  Neon (real DB)
-demo        ─►  cobbvault-demo     ─►  Neon (demo DB)  + DEMO_MODE=true
+production  ─►  bestfamilyvault-real     ─►  Neon (real DB)
+demo        ─►  bestfamilyvault-demo     ─►  Neon (demo DB)  + DEMO_MODE=true
 ```
 
 ### Setup
@@ -75,11 +75,11 @@ Demo logins (all use password `demo1234`):
 
 | Email | Role |
 |---|---|
-| `demo@cobbvault.app` | Superuser (full access) |
-| `parent@cobbvault.app` | Admin |
-| `kid1@cobbvault.app` | Member |
-| `kid2@cobbvault.app` | Member |
-| `guest@cobbvault.app` | Read-only |
+| `demo@bestfamilyvault.app` | Superuser (full access) |
+| `parent@bestfamilyvault.app` | Admin |
+| `kid1@bestfamilyvault.app` | Member |
+| `kid2@bestfamilyvault.app` | Member |
+| `guest@bestfamilyvault.app` | Read-only |
 
 ## Useful scripts
 

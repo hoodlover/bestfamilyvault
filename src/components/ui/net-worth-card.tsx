@@ -19,7 +19,7 @@ function formatCents(cents: number, signed = false): string {
 }
 
 const COLLAPSED_LIMIT = 6
-const LS_EXCLUDED_ENTRIES = 'cobbvault:netWorth:excludedEntryIds'
+const LS_EXCLUDED_ENTRIES = 'bestfamilyvault:netWorth:excludedEntryIds'
 
 // Custom hook: persist a string-set to localStorage so the user's
 // include/exclude toggles survive a reload. We hydrate after mount

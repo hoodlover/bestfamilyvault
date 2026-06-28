@@ -20,7 +20,7 @@ import type { FamilyVital } from '@/lib/family-vitals'
 import { FamilyMemberEditModal } from './family-member-edit-modal'
 import { pushModal } from '@/lib/modal-stack'
 
-// Per-person accent palette — every member gets one of the four CobbVault
+// Per-person accent palette — every member gets one of the four BestFamilyVault
 // icon-set colours (Gold / Maroon / Navy / Forest Green) or a -lite variant.
 // No off-palette accents (no rose/sky/violet/emerald/pink) so the roster
 // reads as an extension of the icons. Stored as raw CSS values because
@@ -188,7 +188,7 @@ function FamilyInfoModal({
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header — vault-palette gradient strip (gold → maroon, both
-            CobbVault icon colours) so the modal reads as a family
+            BestFamilyVault icon colours) so the modal reads as a family
             artifact, not a spreadsheet. Layout is a two-row stack: title
             row owns icon + heading + close button; description gets the
             full header width below so it doesn't get squeezed by the

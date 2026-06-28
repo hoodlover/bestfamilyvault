@@ -143,7 +143,7 @@ export function NotificationToggle() {
       <div className="text-sm text-stone-300 space-y-2">
         <p className="text-stone-300">Notifications are blocked in your browser settings.</p>
         <p className="text-xs text-stone-500">
-          Re-enable for cobbvault.com in your browser&rsquo;s site settings, then reload.
+          Re-enable for bestfamilyvault.com in your browser&rsquo;s site settings, then reload.
         </p>
       </div>
     )

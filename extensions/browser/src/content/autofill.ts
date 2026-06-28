@@ -71,7 +71,7 @@ let shadowRoot: ShadowRoot | null = null
 function getShadow(): ShadowRoot {
   if (shadowRoot) return shadowRoot
   const host = document.createElement('div')
-  host.setAttribute('data-cobbvault-host', '1')
+  host.setAttribute('data-bestfamilyvault-host', '1')
   // The host has zero size; widgets inside use position:fixed (viewport
   // coords) so they don't depend on the host's layout.
   host.style.cssText = [
@@ -1024,7 +1024,7 @@ async function refreshAndAttach() {
     watchAllPasswordInputsForSave()
   }
   if ('error' in res && res.error) {
-    console.warn('[cobbvault] getCredentials failed:', res.error)
+    console.warn('[bestfamilyvault] getCredentials failed:', res.error)
   }
 }
 

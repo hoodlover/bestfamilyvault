@@ -1,10 +1,10 @@
 [
   {
-    "_comment": "Digital Asset Links for the Cobb Vault TWA (Trusted Web Activity). Once filled in, this file proves to Android that the cobbvault.vercel.app domain and the published .apk/.aab belong to the same owner — without it the TWA shows a browser URL bar at the top. SETUP: 1) run `bubblewrap init --manifest=https://cobbvault.vercel.app/manifest.webmanifest`, 2) bubblewrap creates a keystore and prints the SHA256 fingerprint, 3) replace REPLACE_WITH_SHA256_FROM_BUBBLEWRAP below with that fingerprint (colons stay), 4) deploy + open https://cobbvault.vercel.app/.well-known/assetlinks.json to confirm it serves, 5) install the APK on an Android device — no URL bar should appear. Update package_name below if you chose a different one during bubblewrap init.",
+    "_comment": "Digital Asset Links for the Best Family Vault TWA (Trusted Web Activity). Once filled in, this file proves to Android that the bestfamilyvault.vercel.app domain and the published .apk/.aab belong to the same owner — without it the TWA shows a browser URL bar at the top. SETUP: 1) run `bubblewrap init --manifest=https://bestfamilyvault.vercel.app/manifest.webmanifest`, 2) bubblewrap creates a keystore and prints the SHA256 fingerprint, 3) replace REPLACE_WITH_SHA256_FROM_BUBBLEWRAP below with that fingerprint (colons stay), 4) deploy + open https://bestfamilyvault.vercel.app/.well-known/assetlinks.json to confirm it serves, 5) install the APK on an Android device — no URL bar should appear. Update package_name below if you chose a different one during bubblewrap init.",
     "relation": ["delegate_permission/common.handle_all_urls"],
     "target": {
       "namespace": "android_app",
-      "package_name": "com.cobbvault.app",
+      "package_name": "com.bestfamilyvault.app",
       "sha256_cert_fingerprints": [
         "REPLACE_WITH_SHA256_FROM_BUBBLEWRAP"
       ]

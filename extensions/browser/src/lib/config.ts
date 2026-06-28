@@ -2,7 +2,7 @@
 // against localhost in development. Stored in chrome.storage.local
 // under VAULT_BASE_URL so it survives extension reloads.
 
-export const DEFAULT_VAULT_BASE_URL = 'https://cobbvault.vercel.app'
+export const DEFAULT_VAULT_BASE_URL = 'https://bestfamilyvault.vercel.app'
 
 export const STORAGE_KEYS = {
   vaultBaseUrl: 'VAULT_BASE_URL',

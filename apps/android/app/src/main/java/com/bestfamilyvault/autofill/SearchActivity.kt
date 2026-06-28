@@ -1,4 +1,4 @@
-package com.cobbvault.autofill
+package com.bestfamilyvault.autofill
 
 import android.app.Activity
 import android.content.Intent
@@ -93,7 +93,7 @@ class SearchActivity : AppCompatActivity() {
                 override fun onAuthenticationError(errorCode: Int, errString: CharSequence) = onFail()
             })
         val info = BiometricPrompt.PromptInfo.Builder()
-            .setTitle("Search Cobb Vault")
+            .setTitle("Search Best Family Vault")
             .setDescription("Verify it's you before browsing saved logins.")
             .setAllowedAuthenticators(allowed)
             .build()

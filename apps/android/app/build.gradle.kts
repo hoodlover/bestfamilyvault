@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.cobbvault.autofill"
+    namespace = "com.bestfamilyvault.autofill"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.cobbvault.autofill"
+        applicationId = "com.bestfamilyvault.autofill"
         // Autofill framework requires API 26 (Oreo).
         minSdk = 26
         targetSdk = 34
