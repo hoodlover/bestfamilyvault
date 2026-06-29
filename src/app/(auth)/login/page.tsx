@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { signIn } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-import { Eye, EyeOff } from 'lucide-react'
+import { ArrowRight, Eye, EyeOff, Sparkles } from 'lucide-react'
 
 export default function LoginPage() {
   const [error, setError] = useState<string | null>(null)
@@ -39,6 +39,46 @@ export default function LoginPage() {
 
   return (
     <div className="bg-stone-900/80 backdrop-blur border border-stone-700/50 rounded-2xl p-6 sm:p-8 shadow-2xl">
+      <div className="mb-5 overflow-hidden rounded-xl border border-emerald-500/20 bg-stone-950/70">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/best%20famvault.png"
+          alt="Best Family Vault"
+          width={1728}
+          height={922}
+          className="block h-auto w-full object-cover"
+        />
+      </div>
+
+      <Link
+        href="/onboarding"
+        className="group mb-5 grid grid-cols-[64px_1fr_auto] items-center gap-3 rounded-xl border border-emerald-500/25 bg-emerald-950/25 p-3 transition hover:border-emerald-400/50 hover:bg-emerald-950/40"
+      >
+        <span className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-lg border border-emerald-400/20 bg-stone-950/70">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/vaultlogo.png"
+            alt=""
+            width={56}
+            height={56}
+            className="h-14 w-14 object-contain"
+          />
+        </span>
+        <span className="min-w-0">
+          <span className="flex items-center gap-1.5 text-xs font-medium uppercase tracking-[0.14em] text-emerald-300">
+            <Sparkles size={13} />
+            New vault
+          </span>
+          <span className="mt-1 block text-sm font-semibold text-stone-100">
+            Create Your Best Family Vault
+          </span>
+          <span className="mt-0.5 block text-xs leading-5 text-stone-400">
+            Guided setup for imports, people, documents, and first steps.
+          </span>
+        </span>
+        <ArrowRight size={18} className="text-emerald-300 transition group-hover:translate-x-0.5" />
+      </Link>
+
       {process.env.NEXT_PUBLIC_DEMO_MODE === 'true' && (
         <Link
           href="/demo"
@@ -130,13 +170,13 @@ export default function LoginPage() {
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/icons/cobb/loginbutton.png"
+            src="/enterthevault.png"
             alt=""
-            width={420}
-            height={120}
+            width={1728}
+            height={922}
             // pointer-events-none so the <button> always gets the click —
             // on iOS the image was absorbing taps and the form never submitted.
-            className={`block h-auto w-full object-contain pointer-events-none ${loading ? 'animate-pulse' : ''}`}
+            className={`block h-auto w-full max-h-20 object-cover object-center pointer-events-none ${loading ? 'animate-pulse' : ''}`}
           />
         </button>
       </form>
