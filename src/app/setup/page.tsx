@@ -25,7 +25,8 @@ export default async function SetupPage() {
       <div className="w-full max-w-md px-4">
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-emerald-600/10 border border-emerald-600/20 mb-4">
-            <img src="/icons/cobb/cfv-animals-logo-real-no-smile.png" width={36} height={36} alt="" className="object-contain" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/vaultlogo.png" width={36} height={36} alt="" className="object-contain" />
           </div>
           <h1 className="text-3xl font-bold text-stone-100 tracking-tight">Vault Setup</h1>
           <p className="text-stone-400 text-sm mt-1">Create the first superuser account.</p>
