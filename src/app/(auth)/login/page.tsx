@@ -42,7 +42,7 @@ export default function LoginPage() {
       <div className="mb-5 overflow-hidden rounded-xl border border-emerald-500/20 bg-stone-950/70">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/best%20famvault.png"
+          src="/bestfamvault.png"
           alt="Best Family Vault"
           width={1728}
           height={922}
@@ -170,7 +170,7 @@ export default function LoginPage() {
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/enterthevault.png"
+            src="/enter.png"
             alt=""
             width={1728}
             height={922}
