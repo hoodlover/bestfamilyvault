@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react'
 import Link from 'next/link'
+import { createOnboardingVaultAccount } from '@/lib/actions/onboarding'
 import {
   ArrowLeft,
   ArrowRight,
@@ -24,8 +25,14 @@ type OnboardingState = {
   ownerName: string
   email: string
   familyMembers: string
-  address: string
+  addressLine1: string
+  addressLine2: string
+  city: string
+  stateRegion: string
+  postalCode: string
   phone: string
+  password: string
+  confirmPassword: string
   passwordManager: string
   importHelp: string[]
   firstFocus: string
@@ -132,8 +139,14 @@ const initialState: OnboardingState = {
   ownerName: '',
   email: '',
   familyMembers: '',
-  address: '',
+  addressLine1: '',
+  addressLine2: '',
+  city: '',
+  stateRegion: '',
+  postalCode: '',
   phone: '',
+  password: '',
+  confirmPassword: '',
   passwordManager: 'Other / not sure',
   importHelp: ['Import passwords', 'Organize family categories'],
   firstFocus: 'Passwords and logins',
@@ -147,6 +160,7 @@ export function OnboardingWizard() {
   const [stepIndex, setStepIndex] = useState(0)
   const [state, setState] = useState<OnboardingState>(initialState)
   const [preparing, setPreparing] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   const current = steps[stepIndex]
   const theme = themes[current.theme]
@@ -166,24 +180,62 @@ export function OnboardingWizard() {
   }
 
   function next() {
+    setError(null)
     if (stepIndex < steps.length - 1) setStepIndex((index) => index + 1)
   }
 
   function back() {
+    setError(null)
     if (stepIndex > 0) setStepIndex((index) => index - 1)
   }
 
-  function prepareVault() {
+  async function prepareVault() {
     setPreparing(true)
+    setError(null)
+    const formData = new FormData()
+    formData.set('ownerName', state.ownerName)
+    formData.set('email', state.email)
+    formData.set('password', state.password)
+    formData.set('confirmPassword', state.confirmPassword)
+    formData.set('phone', state.phone)
+    formData.set('addressLine1', state.addressLine1)
+    formData.set('addressLine2', state.addressLine2)
+    formData.set('city', state.city)
+    formData.set('stateRegion', state.stateRegion)
+    formData.set('postalCode', state.postalCode)
+
+    const result = await createOnboardingVaultAccount(formData)
+    if (result?.error) {
+      setPreparing(false)
+      setError(result.error)
+      return
+    }
+
     try {
-      window.localStorage.setItem('bestfamilyvault.onboarding', JSON.stringify(state))
+      const safeState = {
+        goals: state.goals,
+        vaultName: state.vaultName,
+        ownerName: state.ownerName,
+        email: state.email,
+        familyMembers: state.familyMembers,
+        addressLine1: state.addressLine1,
+        addressLine2: state.addressLine2,
+        city: state.city,
+        stateRegion: state.stateRegion,
+        postalCode: state.postalCode,
+        phone: state.phone,
+        passwordManager: state.passwordManager,
+        importHelp: state.importHelp,
+        firstFocus: state.firstFocus,
+      }
+      window.localStorage.setItem('bestfamilyvault.onboarding', JSON.stringify(safeState))
       window.localStorage.setItem('bestfamilyvault.pendingVaultName', summary.vaultName)
       window.localStorage.setItem('bestfamilyvault.importSource', state.passwordManager)
     } catch {
       // localStorage is helpful, not required.
     }
     window.setTimeout(() => {
-      window.location.assign('/login?onboarding=complete')
+      window.location.assign('/login?onboarding=complete&registered=1')
     }, 1800)
   }
 
@@ -286,7 +338,7 @@ export function OnboardingWizard() {
                   <div className="grid gap-4 sm:grid-cols-2">
                     <Field label="Vault name" value={state.vaultName} onChange={(value) => update('vaultName', value)} placeholder="The Johnson Family Vault" />
                     <Field label="Your name" value={state.ownerName} onChange={(value) => update('ownerName', value)} placeholder="Alex Johnson" />
-                    <Field label="Email" type="email" value={state.email} onChange={(value) => update('email', value)} placeholder="alex@example.com" />
+                    <Field label="Email" type="email" value={state.email} onChange={(value) => update('email', value)} placeholder="alex@example.com" autoComplete="email" />
                     <Field label="First focus" value={state.firstFocus} onChange={(value) => update('firstFocus', value)} placeholder="Passwords, documents, emergency plan..." />
                   </div>
                   <TextArea
@@ -305,9 +357,15 @@ export function OnboardingWizard() {
                   copy="This becomes a starting point for emergency sheets, contacts, and identity records."
                   theme={theme}
                 >
-                  <div className="grid gap-4 sm:grid-cols-2">
-                    <Field label="Home address" value={state.address} onChange={(value) => update('address', value)} placeholder="Street, city, state" />
-                    <Field label="Best phone number" value={state.phone} onChange={(value) => update('phone', value)} placeholder="(555) 123-4567" />
+                  <div className="grid gap-4">
+                    <Field label="Street address" value={state.addressLine1} onChange={(value) => update('addressLine1', value)} placeholder="123 Main Street" autoComplete="address-line1" />
+                    <Field label="Apartment, suite, or unit" value={state.addressLine2} onChange={(value) => update('addressLine2', value)} placeholder="Apt 4B" autoComplete="address-line2" />
+                    <div className="grid gap-4 sm:grid-cols-[1fr_0.55fr_0.7fr]">
+                      <Field label="City" value={state.city} onChange={(value) => update('city', value)} placeholder="Birmingham" autoComplete="address-level2" />
+                      <Field label="State" value={state.stateRegion} onChange={(value) => update('stateRegion', value)} placeholder="AL" autoComplete="address-level1" />
+                      <Field label="ZIP" value={state.postalCode} onChange={(value) => update('postalCode', value)} placeholder="35203" autoComplete="postal-code" />
+                    </div>
+                    <Field label="Best phone number" value={state.phone} onChange={(value) => update('phone', value)} placeholder="(555) 123-4567" autoComplete="tel" />
                   </div>
                   <p className="rounded-xl border border-stone-800 bg-stone-950/60 px-4 py-3 text-sm leading-6 text-stone-400">
                     Keep this light for now. The vault can later store IDs, insurance, vehicle records, subscriptions, and where-to-find-it notes.
@@ -340,6 +398,16 @@ export function OnboardingWizard() {
                     onToggle={(value) => update('importHelp', toggleValue(state.importHelp, value))}
                     theme={theme}
                   />
+                  <div className="rounded-xl border border-amber-400/25 bg-amber-500/10 p-4">
+                    <h3 className="text-sm font-semibold text-amber-100">Vault login credentials</h3>
+                    <p className="mt-1 text-xs leading-5 text-stone-400">
+                      Use the email from the People step and this password to sign in after your vault is prepared.
+                    </p>
+                    <div className="mt-4 grid gap-4 sm:grid-cols-2">
+                      <Field label="Vault password" type="password" value={state.password} onChange={(value) => update('password', value)} placeholder="At least 10 characters" autoComplete="new-password" />
+                      <Field label="Confirm vault password" type="password" value={state.confirmPassword} onChange={(value) => update('confirmPassword', value)} placeholder="Repeat password" autoComplete="new-password" />
+                    </div>
+                  </div>
                 </StepShell>
               )}
 
@@ -353,9 +421,15 @@ export function OnboardingWizard() {
                   <div className="grid gap-3 sm:grid-cols-2">
                     <SummaryItem label="Vault" value={summary.vaultName} />
                     <SummaryItem label="People listed" value={summary.memberCount ? String(summary.memberCount) : 'Add later'} />
+                    <SummaryItem label="Login email" value={state.email || 'Add before preparing'} />
                     <SummaryItem label="First focus" value={state.firstFocus || 'Passwords and documents'} />
                     <SummaryItem label="Import source" value={state.passwordManager} />
                   </div>
+                  {error && (
+                    <div className="rounded-lg border border-red-800/50 bg-red-950/30 px-3 py-2 text-sm text-red-200">
+                      {error}
+                    </div>
+                  )}
                   {preparing && (
                     <div className="mt-2 h-2 overflow-hidden rounded-full bg-stone-800">
                       <div className="h-full w-2/3 animate-pulse rounded-full bg-emerald-500" />
@@ -379,7 +453,7 @@ export function OnboardingWizard() {
                     type="button"
                     onClick={prepareVault}
                     disabled={preparing}
-                    className="inline-flex items-center gap-2 rounded-lg bg-emerald-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-emerald-500 disabled:cursor-wait disabled:opacity-70"
+                    className="inline-flex items-center gap-2 rounded-lg bg-amber-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-amber-500 disabled:cursor-wait disabled:opacity-70"
                   >
                     {preparing ? 'Preparing...' : 'Prepare my vault'}
                     <Sparkles size={16} />
@@ -388,7 +462,7 @@ export function OnboardingWizard() {
                   <button
                     type="button"
                     onClick={next}
-                    className="inline-flex items-center gap-2 rounded-lg bg-emerald-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-emerald-500"
+                    className="inline-flex items-center gap-2 rounded-lg bg-amber-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-amber-500"
                   >
                     Continue
                     <ArrowRight size={16} />
@@ -499,12 +573,14 @@ function Field({
   onChange,
   placeholder,
   type = 'text',
+  autoComplete,
 }: {
   label: string
   value: string
   onChange: (value: string) => void
   placeholder: string
   type?: string
+  autoComplete?: string
 }) {
   return (
     <label className="block">
@@ -514,7 +590,8 @@ function Field({
         value={value}
         onChange={(event) => onChange(event.target.value)}
         placeholder={placeholder}
-        className="w-full rounded-lg border border-stone-700 bg-stone-950 px-3 py-2.5 text-stone-100 placeholder-stone-600 outline-none transition focus:border-emerald-600 focus:ring-2 focus:ring-emerald-600/30"
+        autoComplete={autoComplete}
+        className="w-full rounded-lg border border-stone-700 bg-stone-950 px-3 py-2.5 text-stone-100 placeholder-stone-600 outline-none transition focus:border-amber-500 focus:ring-2 focus:ring-amber-500/30"
       />
     </label>
   )
