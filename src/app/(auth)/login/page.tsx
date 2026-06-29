@@ -39,22 +39,11 @@ export default function LoginPage() {
 
   return (
     <div className="bg-stone-900/80 backdrop-blur border border-stone-700/50 rounded-2xl p-6 sm:p-8 shadow-2xl">
-      <div className="mb-5 overflow-hidden rounded-xl border border-emerald-500/20 bg-stone-950/70">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/bestfamvault.png"
-          alt="Best Family Vault"
-          width={1728}
-          height={922}
-          className="block h-auto w-full object-cover"
-        />
-      </div>
-
       <Link
         href="/onboarding"
-        className="group mb-5 grid grid-cols-[64px_1fr_auto] items-center gap-3 rounded-xl border border-emerald-500/25 bg-emerald-950/25 p-3 transition hover:border-emerald-400/50 hover:bg-emerald-950/40"
+        className="group mb-5 grid grid-cols-[64px_1fr_auto] items-center gap-3 rounded-xl border border-amber-500/30 bg-amber-950/25 p-3 transition hover:border-amber-400/60 hover:bg-amber-950/35"
       >
-        <span className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-lg border border-emerald-400/20 bg-stone-950/70">
+        <span className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-lg border border-amber-400/25 bg-stone-950/70">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/vaultlogo.png"
@@ -65,7 +54,7 @@ export default function LoginPage() {
           />
         </span>
         <span className="min-w-0">
-          <span className="flex items-center gap-1.5 text-xs font-medium uppercase tracking-[0.14em] text-emerald-300">
+          <span className="flex items-center gap-1.5 text-xs font-medium uppercase tracking-[0.14em] text-amber-300">
             <Sparkles size={13} />
             New vault
           </span>
@@ -76,7 +65,7 @@ export default function LoginPage() {
             Guided setup for imports, people, documents, and first steps.
           </span>
         </span>
-        <ArrowRight size={18} className="text-emerald-300 transition group-hover:translate-x-0.5" />
+        <ArrowRight size={18} className="text-amber-300 transition group-hover:translate-x-0.5" />
       </Link>
 
       {process.env.NEXT_PUBLIC_DEMO_MODE === 'true' && (

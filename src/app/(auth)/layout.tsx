@@ -9,21 +9,21 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
           <div className="mb-4 flex justify-center">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/mainscene.png"
-              alt=""
-              width={1792}
-              height={1024}
-              className="block h-auto w-full max-w-md object-cover rounded-xl"
+              src="/bestfamvault.png"
+              alt={APP_NAME}
+              width={1728}
+              height={922}
+              className="block h-auto w-full max-w-md mx-auto object-contain"
             />
           </div>
           {/* APP_NAME stays in the alt text so screen readers get the brand. */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/bestfamvault.png"
-            alt={APP_NAME}
-            width={1728}
-            height={922}
-            className="block h-auto w-full max-w-md mx-auto object-contain"
+            src="/mainscene.png"
+            alt=""
+            width={1792}
+            height={1024}
+            className="block h-auto w-full max-w-md object-cover rounded-xl"
           />
         </div>
         {children}

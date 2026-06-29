@@ -16,7 +16,7 @@ import {
 } from 'lucide-react'
 
 type StepId = 'intro' | 'goals' | 'household' | 'details' | 'import' | 'finish'
-type ThemeKey = 'gold' | 'emerald' | 'sky' | 'rose' | 'violet' | 'teal'
+type ThemeKey = 'gold' | 'green' | 'blue' | 'red'
 
 type OnboardingState = {
   goals: string[]
@@ -33,11 +33,11 @@ type OnboardingState = {
 
 const steps: Array<{ id: StepId; label: string; theme: ThemeKey }> = [
   { id: 'intro', label: 'Intro', theme: 'gold' },
-  { id: 'goals', label: 'Goals', theme: 'emerald' },
-  { id: 'household', label: 'People', theme: 'sky' },
-  { id: 'details', label: 'Details', theme: 'rose' },
-  { id: 'import', label: 'Import', theme: 'violet' },
-  { id: 'finish', label: 'Prepare', theme: 'teal' },
+  { id: 'goals', label: 'Goals', theme: 'green' },
+  { id: 'household', label: 'People', theme: 'blue' },
+  { id: 'details', label: 'Details', theme: 'red' },
+  { id: 'import', label: 'Import', theme: 'blue' },
+  { id: 'finish', label: 'Prepare', theme: 'green' },
 ]
 
 const themes: Record<ThemeKey, {
@@ -62,7 +62,7 @@ const themes: Record<ThemeKey, {
     selectedIcon: 'text-amber-200',
     subtle: 'text-amber-100',
   },
-  emerald: {
+  green: {
     accent: 'text-emerald-200',
     badge: 'border-emerald-300/30 bg-emerald-500/10 text-emerald-100',
     glow: 'shadow-emerald-950/30',
@@ -73,7 +73,7 @@ const themes: Record<ThemeKey, {
     selectedIcon: 'text-emerald-300',
     subtle: 'text-emerald-100',
   },
-  sky: {
+  blue: {
     accent: 'text-sky-200',
     badge: 'border-sky-300/30 bg-sky-500/10 text-sky-100',
     glow: 'shadow-sky-950/30',
@@ -84,38 +84,16 @@ const themes: Record<ThemeKey, {
     selectedIcon: 'text-sky-200',
     subtle: 'text-sky-100',
   },
-  rose: {
-    accent: 'text-rose-200',
-    badge: 'border-rose-300/30 bg-rose-500/10 text-rose-100',
-    glow: 'shadow-rose-950/30',
-    icon: 'border-rose-400/30 bg-rose-400/10 text-rose-200',
-    panel: 'border-rose-400/25 bg-rose-500/10',
-    progress: 'bg-rose-400',
-    selected: 'border-rose-400/70 bg-rose-400/10 text-rose-100',
-    selectedIcon: 'text-rose-200',
-    subtle: 'text-rose-100',
-  },
-  violet: {
-    accent: 'text-violet-200',
-    badge: 'border-violet-300/30 bg-violet-500/10 text-violet-100',
-    glow: 'shadow-violet-950/30',
-    icon: 'border-violet-400/30 bg-violet-400/10 text-violet-200',
-    panel: 'border-violet-400/25 bg-violet-500/10',
-    progress: 'bg-violet-400',
-    selected: 'border-violet-400/70 bg-violet-400/10 text-violet-100',
-    selectedIcon: 'text-violet-200',
-    subtle: 'text-violet-100',
-  },
-  teal: {
-    accent: 'text-teal-200',
-    badge: 'border-teal-300/30 bg-teal-500/10 text-teal-100',
-    glow: 'shadow-teal-950/30',
-    icon: 'border-teal-400/30 bg-teal-400/10 text-teal-200',
-    panel: 'border-teal-400/25 bg-teal-500/10',
-    progress: 'bg-teal-400',
-    selected: 'border-teal-400/70 bg-teal-400/10 text-teal-100',
-    selectedIcon: 'text-teal-200',
-    subtle: 'text-teal-100',
+  red: {
+    accent: 'text-red-200',
+    badge: 'border-red-300/30 bg-red-500/10 text-red-100',
+    glow: 'shadow-red-950/30',
+    icon: 'border-red-400/30 bg-red-400/10 text-red-200',
+    panel: 'border-red-400/25 bg-red-500/10',
+    progress: 'bg-red-500',
+    selected: 'border-red-400/70 bg-red-500/10 text-red-100',
+    selectedIcon: 'text-red-200',
+    subtle: 'text-red-100',
   },
 }
 
@@ -240,7 +218,7 @@ export function OnboardingWizard() {
             <div className="grid grid-cols-3 gap-3 text-xs text-stone-200">
               <MiniStat icon={<LockKeyhole size={16} />} label="Passwords" tone="text-amber-200" />
               <MiniStat icon={<FileKey size={16} />} label="Documents" tone="text-sky-200" />
-              <MiniStat icon={<Users size={16} />} label="Family" tone="text-rose-200" />
+              <MiniStat icon={<Users size={16} />} label="Family" tone="text-red-200" />
             </div>
           </div>
         </aside>
@@ -275,9 +253,9 @@ export function OnboardingWizard() {
                   theme={theme}
                 >
                   <div className="grid gap-3 sm:grid-cols-3">
-                    <IntroTile icon={<LockKeyhole size={18} />} title="Passwords" copy="Bring in your logins and organize them by person." tone="amber" />
-                    <IntroTile icon={<Home size={18} />} title="Household" copy="Name the people and places this vault protects." tone="sky" />
-                    <IntroTile icon={<Import size={18} />} title="Imports" copy="Tell us what you use today so the next step is clear." tone="violet" />
+                    <IntroTile icon={<LockKeyhole size={18} />} title="Passwords" copy="Bring in your logins and organize them by person." tone="gold" />
+                    <IntroTile icon={<Home size={18} />} title="Household" copy="Name the people and places this vault protects." tone="blue" />
+                    <IntroTile icon={<Import size={18} />} title="Imports" copy="Tell us what you use today so the next step is clear." tone="red" />
                   </div>
                 </StepShell>
               )}
@@ -464,9 +442,9 @@ function StepShell({
 }
 
 const introToneClasses = {
-  amber: 'border-amber-400/25 bg-amber-500/10 text-amber-200',
-  sky: 'border-sky-400/25 bg-sky-500/10 text-sky-200',
-  violet: 'border-violet-400/25 bg-violet-500/10 text-violet-200',
+  gold: 'border-amber-400/25 bg-amber-500/10 text-amber-200',
+  blue: 'border-sky-400/25 bg-sky-500/10 text-sky-200',
+  red: 'border-red-400/25 bg-red-500/10 text-red-200',
 }
 
 function IntroTile({ icon, title, copy, tone }: { icon: React.ReactNode; title: string; copy: string; tone: keyof typeof introToneClasses }) {

@@ -95,15 +95,15 @@ const THEMES: Record<string, FormTheme> = {
     spinnerBorder: 'border-amber-200',
     hoverText: 'hover:text-amber-400',
   },
-  violet: {
-    inputFocus: 'focus:ring-violet-600/50 focus:border-violet-600',
-    button: 'bg-violet-700 hover:bg-violet-600 disabled:bg-violet-900',
-    check: 'text-violet-600 focus:ring-violet-600',
-    subtleText: 'text-violet-300',
-    pillIdle: 'bg-violet-900/40 hover:bg-violet-800/50 border-violet-700/40 text-violet-200',
-    pillFilled: 'bg-violet-700 hover:bg-violet-600',
-    spinnerBorder: 'border-violet-200',
-    hoverText: 'hover:text-violet-400',
+  red: {
+    inputFocus: 'focus:ring-red-600/50 focus:border-red-600',
+    button: 'bg-red-700 hover:bg-red-600 disabled:bg-red-900',
+    check: 'text-red-600 focus:ring-red-600',
+    subtleText: 'text-red-300',
+    pillIdle: 'bg-red-900/40 hover:bg-red-800/50 border-red-700/40 text-red-200',
+    pillFilled: 'bg-red-700 hover:bg-red-600',
+    spinnerBorder: 'border-red-200',
+    hoverText: 'hover:text-red-400',
   },
   rose: {
     inputFocus: 'focus:ring-rose-600/50 focus:border-rose-600',
@@ -117,13 +117,13 @@ const THEMES: Record<string, FormTheme> = {
   },
 }
 
-function themeForType(_t: EntryType): FormTheme {
+function themeForType(): FormTheme {
   // Reverted — Lance preferred the unified emerald look across all add
   // pages. The per-type palette mapping below is intentionally bypassed;
-  // restore by switching on `_t` again if you want it back.
+  // restore by accepting the entry type here and switching on it again.
   //   case 'login': return THEMES.amber
   //   case 'document': return THEMES.sky
-  //   case 'note' | 'credit_card': return THEMES.violet
+  //   case 'note' | 'credit_card': return THEMES.red
   //   case 'identity': return THEMES.rose
   //   default: return THEMES.emerald
   return THEMES.emerald
@@ -245,7 +245,7 @@ interface Props {
 export function NewEntryForm({ categories, subcategories, creditCards = [], familyProfiles = [], currentUserId, subscriptionsSubcategoryId, defaultCategoryId, defaultSubcategoryId, defaultIsPrivate, defaultIsPersonal, defaultIsRecurring, isSuperuser, defaultType }: Props) {
   const router = useRouter()
   const [type] = useState<EntryType>(resolveType(defaultType))
-  const theme = themeForType(type)
+  const theme = themeForType()
   const [categoryId, setCategoryId] = useState(defaultCategoryId ?? categories[0]?.id ?? '')
   const [subcategoryId, setSubcategoryId] = useState(defaultSubcategoryId ?? '')
   const [paidWith, setPaidWith] = useState('')

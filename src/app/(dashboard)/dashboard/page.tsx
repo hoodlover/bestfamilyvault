@@ -429,7 +429,7 @@ export default async function DashboardPage() {
             img="/icons/cobb/icons/system/browsenotes.png"
             title="Notes"
             detail="Browse"
-            accent="violet"
+            accent="red"
           />
           <ActionTile
             href="/todos"
@@ -638,13 +638,13 @@ function ActionTile({
   img: string
   title: string
   detail: string
-  accent: 'emerald' | 'amber' | 'sky' | 'violet'
+  accent: 'emerald' | 'amber' | 'sky' | 'red'
 }) {
   const accentClass = {
     emerald: 'border-emerald-700/40 hover:border-emerald-500/70',
     amber: 'border-amber-700/40 hover:border-amber-500/70',
     sky: 'border-sky-700/40 hover:border-sky-500/70',
-    violet: 'border-violet-700/40 hover:border-violet-500/70',
+    red: 'border-red-700/40 hover:border-red-500/70',
   }[accent]
 
   return (

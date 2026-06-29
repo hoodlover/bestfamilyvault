@@ -155,7 +155,7 @@ export function UserMenu({ name, email, image, role, unreadCount = 0 }: Props) {
                 onClick={() => setOpen(false)}
                 className="flex items-center gap-2 px-3 py-2 text-sm text-stone-300 hover:bg-stone-800 hover:text-stone-100"
               >
-                <ShieldCheck size={15} className="text-purple-400" />
+                <ShieldCheck size={15} className="text-sky-400" />
                 Admin Panel
               </Link>
             )}

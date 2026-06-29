@@ -12,7 +12,7 @@ export const proxy = auth((req) => {
   // both online (for cache-seeding) and offline (when the SW serves it from
   // cache). The page itself contains zero server-rendered data — actual vault
   // content lives in the user's IndexedDB, encrypted with their local PIN.
-  const publicPaths = ['/login', '/register', '/invite', '/setup', '/demo', '/offline', '/forgot-password', '/reset-password']
+  const publicPaths = ['/login', '/register', '/invite', '/setup', '/demo', '/offline', '/forgot-password', '/reset-password', '/onboarding']
   const isPublic = publicPaths.some((p) => pathname.startsWith(p))
 
   if (!session && !isPublic) {
@@ -37,5 +37,5 @@ export const proxy = auth((req) => {
 })
 
 export const config = {
-  matcher: ['/((?!api|_next/static|_next/image|favicon.ico|sw.js|manifest.webmanifest|icons).*)'],
+  matcher: ['/((?!api|_next/static|_next/image|favicon.ico|sw.js|manifest.webmanifest|icons|.*\\.(?:png|jpg|jpeg|gif|webp|svg|ico|json|txt|xml|webmanifest)$).*)'],
 }

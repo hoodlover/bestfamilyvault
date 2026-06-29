@@ -7,7 +7,7 @@ import { clsx } from 'clsx'
 
 const roleBadge: Record<string, string> = {
   superuser: 'bg-emerald-950/40 text-emerald-400 border-emerald-900/50',
-  admin: 'bg-purple-900/40 text-purple-400 border-purple-800/50',
+  admin: 'bg-sky-950/40 text-sky-300 border-sky-800/50',
   member: 'bg-blue-900/40 text-blue-400 border-blue-800/50',
   readonly: 'bg-stone-700/40 text-stone-400 border-stone-600/50',
 }
